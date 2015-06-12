@@ -18,3 +18,6 @@
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
 
+#nav-mobile {
+  margin-top: 7px;
+}

@@ -1,28 +1,31 @@
-<h2><%=	image_tag 'hashrobot_sm.png' %> Welcome to #Robot</h2>
-<%=	link_to 'Twitter', '/auth/twitter' %>
-<div>
-  <p>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</p>
-  <p><%=	image_tag 'hashrobot.png' %></p>
-</div>
-<div>
-  Materialize check:
-  <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>button</a>
-</div>
+<div class="container">
 
-<% if current_user %>
-  <div>
-    <h1>Some info about the current_user</h1>
-  </div>
-  <div>
-    <div>
-      <ul>
-        <li><strong>Name:</strong> <%= current_user.name %></li>
-        <li><strong>Provider:</strong> <%= current_user.provider %></li>
-        <li><strong>uID:</strong> <%= current_user.uid %></li>
-        <li><strong>Location:</strong> <%= current_user.location %></li>
-        <li><strong>Avatar URL:</strong> <%= current_user.image_url %></li>
-        <li><strong>URL:</strong> <%= current_user.url %></li>
-      </ul>
-    </div>
-  </div>
-<% end %>
+  <h2>Welcome to #Robot</h2>
+
+  <div class="row">
+
+    <div class="col s6">
+      <p>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</p>
+      <p><%=	image_tag 'hashrobot.png' %></p>
+    </div> <!-- col s6 end -->
+
+    <% if current_user %>
+
+      <div class="col s6">
+        <h6>Some info about the current_user</h6>
+        <div>
+          <ul>
+            <li><strong>Name:</strong> <%= current_user.name %></li>
+            <li><strong>Provider:</strong> <%= current_user.provider %></li>
+            <li><strong>uID:</strong> <%= current_user.uid %></li>
+            <li><strong>Location:</strong> <%= current_user.location %></li>
+            <li><strong>Avatar URL:</strong> <%= current_user.image_url %></li>
+            <li><strong>URL:</strong> <%= current_user.url %></li>
+          </ul>
+        </div>
+      </div> <!-- col s6 end -->
+
+    <% end %>
+
+  </div> <!-- row end -->
+</div> <!-- container end -->

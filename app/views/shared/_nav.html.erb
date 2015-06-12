@@ -1,24 +1,21 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
+    <a href="#" class="brand-logo"><%=	image_tag 'hashrobot_sm.png' %></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">something</a></li>
+      <% if current_user %>
+        <ul>
+          <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
+          <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <%=	link_to 'Login with Twitter', '/auth/twitter' %>
+      <% end %>
     </ul>
-    <% if current_user %>
-      <ul>
-        <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
-        <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-      </ul>
-    <% end %>
+
 
 
   </div>
 </nav>
-<ul>
-  <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-</ul>
 <div class="container">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
