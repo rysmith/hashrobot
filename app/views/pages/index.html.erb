@@ -9,3 +9,20 @@
   <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>button</a>
 </div>
 
+<% if current_user %>
+  <div>
+    <h1>Some info about the current_user</h1>
+  </div>
+  <div>
+    <div>
+      <ul>
+        <li><strong>Name:</strong> <%= current_user.name %></li>
+        <li><strong>Provider:</strong> <%= current_user.provider %></li>
+        <li><strong>uID:</strong> <%= current_user.uid %></li>
+        <li><strong>Location:</strong> <%= current_user.location %></li>
+        <li><strong>Avatar URL:</strong> <%= current_user.image_url %></li>
+        <li><strong>URL:</strong> <%= current_user.url %></li>
+      </ul>
+    </div>
+  </div>
+<% end %>

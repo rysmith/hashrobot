@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback' => 'sessions#create', as: :twitter
 
+  delete '/logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
