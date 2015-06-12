@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  root 'pages#index'
 
-  get 'welcome/index' => 'welcome#index', as: :welcome
+  get 'pages/index' => 'pages#index', as: :welcome
 
-  get 'welcome/about' => 'welcome#about', as: :about
+  get 'pages/about' => 'pages#about', as: :about
 
   get 'users/index' => 'users#index', as: :users
 
   get 'users/show/:id' => 'users#show', as: :user
+
+  get '/auth/:provider/callback' => 'sessions#create', as: :twitter
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
