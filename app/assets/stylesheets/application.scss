@@ -20,10 +20,18 @@
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
 
-
-
 #nav-mobile {
   margin-top: 7px;
 }
 
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
 
