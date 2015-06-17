@@ -62,6 +62,10 @@ GEM
       thor (~> 0.14)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    grackle (0.3.0)
+      json
+      mime-types
+      oauth
     hashie (3.4.2)
     http (0.6.4)
       http_parser.rb (~> 0.6.0)
@@ -188,6 +192,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   figaro
+  grackle
   jbuilder (~> 2.0)
   jquery-rails
   materialize-sass

@@ -1,21 +1,35 @@
+require 'grackle'
+require 'twitter'
+require "rubygems"
+
 class Tweet < ActiveRecord::Base
 
-def collect_with_max_id(collection=[], max_id=nil, &block)
-  response = block.call(max_id)
-  collection += response
-  response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
-end
+  MY_APPLICATION_NAME = "jdlb"
 
-def $client.get_all_tweets(user)
-  collect_with_max_id do |max_id|
-    options = {count: 50, include_rts: true}
-    options[:max_id] = max_id unless max_id.nil?
-    user_timeline(user, options)
+  """Connect to the Twitter API and pull down the latest tweets"""
+  def self.get_latest
+    tweets = client.statuses.user_timeline? :screen_name => MY_APPLICATION_NAME # hit the API
+    tweets.each do |t|
+      # Tweet.create({:content => t.text, :created => created })
+      # created = DateTime.parse(t.created_at)
+      # create the tweet if it doesn't already exist
+      # unless Tweet.exists?(["created=?", created])
+        Tweet.create({:content => t.text, :created => t.created_at })
+      # end
+    end
   end
 
+
+  private
+  def self.client
+    Grackle::Client.new(:ssl=>true,:auth =>{
+                            :type => :oauth,
+                            :consumer_key => Figaro.env.twitter_key,
+                            :consumer_secret => Figaro.env.twitter_secret,
+                            :token => Figaro.env.access_token,
+                            :token_secret => Figaro.env.access_token_secret
+                        })
+
+  end
 end
-
-end
-
-
 
