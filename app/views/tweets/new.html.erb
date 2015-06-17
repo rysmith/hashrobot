@@ -4,6 +4,8 @@
 
   <%= form_tag('/tweets/create')do %>
     <%= text_field_tag(:tweet_body) %>
-    <%= submit_tag 'Tweet!', 'class' => 'btn' %>
+    <%= button_tag(:class => 'btn') do %>
+      <i class="fa fa-twitter"></i> &nbsp; Tweet!
+    <% end %>
   <% end %>
 </div>
