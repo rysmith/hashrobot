@@ -1,12 +1,24 @@
 class TweetsController < ApplicationController
 
   def index
-    puts $client.status(167309659198328832).text
-    puts $client.search("to:justinbieber marry me", result_type: "recent").take(3).collect do |tweet|
-      "#{tweet.user.screen_name}: #{tweet.text}"
-    end
+
   end
 
   def show
+  end
+
+  def new
+
+  end
+
+  def create
+    $client.update(tweet_params[:tweet_body])
+    redirect_to new_tweet_path
+  end
+
+private
+
+  def tweet_params
+    params.permit(:tweet_body)
   end
 end

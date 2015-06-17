@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#destroy'
 
+  get 'tweets/new' => 'tweets#new', as: :new_tweet
+
+  post 'tweets/create' => 'tweets#create', as: :create_tweet
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
