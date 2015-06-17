@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
@@ -21,3 +23,15 @@ $primary-color: color("blue", "lighten-2") !default;
 #nav-mobile {
   margin-top: 7px;
 }
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
