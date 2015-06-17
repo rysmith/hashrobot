@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'tweets/index' => 'tweets#index', as: :tweets
+
   root 'pages#index'
 
   get 'pages/index' => 'pages#index', as: :welcome
