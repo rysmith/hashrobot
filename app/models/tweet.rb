@@ -1,6 +1,6 @@
 require 'grackle'
 require 'twitter'
-require "rubygems"
+require 'rubygems'
 
 class Tweet < ActiveRecord::Base
 
@@ -9,6 +9,7 @@ class Tweet < ActiveRecord::Base
   """Connect to the Twitter API and pull down the latest tweets"""
   def self.get_latest
     tweets = client.statuses.user_timeline? :screen_name => MY_APPLICATION_NAME # hit the API
+    puts tweets
     tweets.each do |t|
       # Tweet.create({:content => t.text, :created => created })
       # created = DateTime.parse(t.created_at)

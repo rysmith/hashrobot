@@ -18,12 +18,8 @@
 @import 'font-awesome';
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
+$secondary-color: #8E2A92;
 @import 'materialize';
-
-#nav-mobile {
-  margin-top: 7px;
-}
-
 
 body {
   display: flex;
@@ -33,5 +29,13 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+.btn {
+  background-color: $primary-color;
+}
+
+.btn:hover {
+  background: $secondary-color;
 }
 

@@ -2,23 +2,27 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <h5 class="white-text">#Robot Creators</h5>
+        <a class="grey-text text-lighten-4" href="http://ryansmith.io">Ryan Smith</a>
+        <br/>
+        <a class="grey-text text-lighten-4" href="https://www.linkedin.com/in/jeffreydemers">Jeff Demers</a>
+        <br/>
+        <a class="grey-text text-lighten-4" href="https://www.linkedin.com/in/christophertwu">Chris Wu</a>
+        <br/>
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <li> <%= link_to 'Welcome', root_path,'class' => 'grey-text text-lighten-3'%> </li>
+          <li> <%= link_to 'New Tweet', new_tweet_path,'class' => 'grey-text text-lighten-3'%> </li>
+          <li> <%= link_to 'Tweet Index', tweets_path,'class' => 'grey-text text-lighten-3'%> </li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-      © 2014 Copyright Text
+      © 2015 Hash Robot, Inc.
       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
     </div>
   </div>
