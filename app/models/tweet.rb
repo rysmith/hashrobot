@@ -4,7 +4,7 @@ class Tweet < ActiveRecord::Base
 
   def self.get_latest
 
-    tweets = client.search("los angeles", result_type: "recent", language: "en", count: 1)
+    tweets = client.search("los angeles", result_type: "recent").take(3)
 
     tweets.each do |t|
       # Tweet.create({:content => t.text, :created => created })
@@ -15,7 +15,6 @@ class Tweet < ActiveRecord::Base
       # end
     end
   end
-
 
 private
 
