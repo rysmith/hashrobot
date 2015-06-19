@@ -1,24 +1,30 @@
 Rails.application.routes.draw do
 
-  get 'tweets/index' => 'tweets#index', as: :tweets
-
+  #send users to the welcome page upon arrival
   root 'pages#index'
 
+  #basic static pages, welcome, about, and contact
   get 'pages/index' => 'pages#index', as: :welcome
 
   get 'pages/about' => 'pages#about', as: :about
 
-  get 'users/index' => 'users#index', as: :users
-
-  get 'users/show/:id' => 'users#show', as: :user
-
+  #create a new session for twitter oauth
   get '/auth/:provider/callback' => 'sessions#create', as: :twitter
 
+  #delete session for twitter oauth
   delete '/logout' => 'sessions#destroy'
 
+  #get all the current tweet in our db
+  get 'tweets/index' => 'tweets#index', as: :tweets
+
+  #compose a new tweet
   get 'tweets/new' => 'tweets#new', as: :new_tweet
 
-  post 'tweets/create' => 'tweets#create', as: :create_tweet
+  #create the tweet on your twitter account
+  post 'tweets/create' => 'tweets#create'
+
+  #hit the twitter REST API and get some tweets for the db
+  post 'tweets/get_latest' => 'tweets#get_latest'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

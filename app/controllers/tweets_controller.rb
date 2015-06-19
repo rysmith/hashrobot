@@ -1,7 +1,8 @@
 class TweetsController < ApplicationController
 
   def index
-    @tweets = Tweet.all
+
+    @tweets = Tweet.all.order(created: :desc)
   end
 
   def show
@@ -12,15 +13,39 @@ class TweetsController < ApplicationController
 
   end
 
+  def get_latest
+
+    tweets = client.search("los angeles", result_type: "recent").take(3)
+
+    tweets.each do |t|
+
+      Tweet.create({:content => t.text, :created => t.created_at })
+    end
+
+    redirect_to tweets_path
+  end
+
   def create
-    $client.update(tweet_params[:tweet_body])
+
+    client.update(tweet_params[:tweet_body])
     redirect_to new_tweet_path
   end
 
 private
 
   def tweet_params
+
     params.permit(:tweet_body)
   end
 
+  def client
+
+    Twitter::REST::Client.new do |config|
+
+      config.consumer_key = Figaro.env.twitter_key
+      config.consumer_secret = Figaro.env.twitter_secret
+      config.access_token = Figaro.env.access_token
+      config.access_token_secret = Figaro.env.access_token_secret
+    end
+  end
 end

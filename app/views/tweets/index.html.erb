@@ -1,13 +1,22 @@
 <div class="container">
-  <h1>Tweets</h1>
-  <p>Show all the tweets in the db</p>
+    <h1>Tweets</h1>
+    <p>Show all the tweets in the db</p>
+  <div>
+    <%= form_tag('/tweets/get_latest')do %>
+      <%= button_tag(:class => 'btn') do %>
+        <i class="fa fa-twitter"></i> &nbsp; Get Latest!
+      <% end %>
+    <% end %>
+  </div>
+  <hr/>
+  <div>
+    <% @tweets.each do |tweet| %>
 
-  <% @tweets.each do |tweet| %>
+        <%= tweet.id%>
+        <%= tweet.content%>
+        <%= tweet.created%>
+        <br>
 
-      <%= tweet.id%>
-      <%= tweet.content%>
-      <%= tweet.created%>
-      <br>
-
-  <% end %>
+    <% end %>
+  </div>
 </div>
