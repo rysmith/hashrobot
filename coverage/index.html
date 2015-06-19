@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-06-19T15:36:43-07:00">2015-06-19T15:36:43-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-06-19T16:14:13-07:00">2015-06-19T16:14:13-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">56.86%</span></span>
+    (<span class="covered_percent"><span class="red">56.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.6
+         0.58
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>10</b> files in total.
-    <b>51</b> relevant lines. 
-    <span class="green"><b>29</b> lines covered</span> and
+    <b>50</b> relevant lines. 
+    <span class="green"><b>28</b> lines covered</span> and
     <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -142,12 +142,12 @@
       
       <tr>
         <td class="strong"><a href="#ccea7b4b1520c4cc7bb20f709ee755d0bd6c60fe" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="red strong">25.0 %</td>
-        <td>16</td>
-        <td>12</td>
-        <td>3</td>
+        <td class="red strong">18.18 %</td>
+        <td>15</td>
+        <td>11</td>
+        <td>2</td>
         <td>9</td>
-        <td>0.3</td>
+        <td>0.2</td>
       </tr>
       
     </tbody>
@@ -236,19 +236,19 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">30.77%</span></span>
+    (<span class="covered_percent"><span class="red">25.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.35
+         0.27
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>2</b> files in total.
-    <b>13</b> relevant lines. 
-    <span class="green"><b>4</b> lines covered</span> and
+    <b>12</b> relevant lines. 
+    <span class="green"><b>3</b> lines covered</span> and
     <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -277,12 +277,12 @@
       
       <tr>
         <td class="strong"><a href="#ccea7b4b1520c4cc7bb20f709ee755d0bd6c60fe" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="red strong">25.0 %</td>
-        <td>16</td>
-        <td>12</td>
-        <td>3</td>
+        <td class="red strong">18.18 %</td>
+        <td>15</td>
+        <td>11</td>
+        <td>2</td>
         <td>9</td>
-        <td>0.3</td>
+        <td>0.2</td>
       </tr>
       
     </tbody>
@@ -1168,10 +1168,10 @@
         <div class="source_table" id="ccea7b4b1520c4cc7bb20f709ee755d0bd6c60fe">
   <div class="header">
     <h3>app/models/user.rb</h3>
-    <h4><span class="red">25.0 %</span> covered</h4>
+    <h4><span class="red">18.18 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>9</b> lines missed.</span>
     </div>
   </div>
@@ -1194,82 +1194,76 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  class &lt;&lt; self</code>
+          <code class="ruby">  def self.from_omniauth(auth_hash)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">    def from_omniauth(auth_hash)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">      user = find_or_create_by(uid: auth_hash[&#39;uid&#39;], provider: auth_hash[&#39;provider&#39;])</code>
+          <code class="ruby">    user = find_or_create_by(uid: auth_hash[&#39;uid&#39;], provider: auth_hash[&#39;provider&#39;])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">      user.name = auth_hash[&#39;info&#39;][&#39;name&#39;]</code>
+          <code class="ruby">    user.name = auth_hash[&#39;info&#39;][&#39;name&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">      user.location = auth_hash[&#39;info&#39;][&#39;location&#39;]</code>
+          <code class="ruby">    user.location = auth_hash[&#39;info&#39;][&#39;location&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">      user.image_url = auth_hash[&#39;info&#39;][&#39;image&#39;]</code>
+          <code class="ruby">    user.image_url = auth_hash[&#39;info&#39;][&#39;image&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">      user.url = auth_hash[&#39;info&#39;][&#39;urls&#39;][&#39;Twitter&#39;]</code>
+          <code class="ruby">    user.url = auth_hash[&#39;info&#39;][&#39;urls&#39;][&#39;Twitter&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">      user.token = auth_hash[&#39;credentials&#39;][&#39;token&#39;]</code>
+          <code class="ruby">    user.token = auth_hash[&#39;credentials&#39;][&#39;token&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">      user.secret = auth_hash[&#39;credentials&#39;][&#39;secret&#39;]</code>
+          <code class="ruby">    user.secret = auth_hash[&#39;credentials&#39;][&#39;secret&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">      user.save!</code>
+          <code class="ruby">    user.save!</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">      user</code>
+          <code class="ruby">    user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
