@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   #hit the twitter REST API and get some tweets for the db
   post 'tweets/get_latest' => 'tweets#get_latest'
 
+  post 'tweets/get_latest' => 'tweets#get_latest'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

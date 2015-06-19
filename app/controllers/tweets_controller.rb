@@ -15,11 +15,17 @@ class TweetsController < ApplicationController
 
   def get_latest
 
-    tweets = client.search("los angeles", result_type: "recent").take(3)
+    tweets = client.search("the -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '34.101509,-118.32691,5mi').take(50)
 
     tweets.each do |t|
 
-      Tweet.create({:content => t.text, :created => t.created_at })
+      created = DateTime.parse(t.created_at.to_s)
+
+      # create the tweet if it doesnt already exist
+      unless Tweet.exists?(["created=?", created])
+
+        Tweet.create({:content => t.text, :created => t.created_at })
+      end
     end
 
     redirect_to tweets_path
@@ -31,7 +37,7 @@ class TweetsController < ApplicationController
     redirect_to new_tweet_path
   end
 
-private
+  private
 
   def tweet_params
 

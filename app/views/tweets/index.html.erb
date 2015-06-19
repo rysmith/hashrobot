@@ -1,22 +1,22 @@
 <div class="container">
-    <h1>Tweets</h1>
-    <p>Show all the tweets in the db</p>
-  <div>
-    <%= form_tag('/tweets/get_latest')do %>
+
+  <h1>Tweets</h1>
+
+  <%= form_tag('/tweets/get_latest')do %>
       <%= button_tag(:class => 'btn') do %>
-        <i class="fa fa-twitter"></i> &nbsp; Get Latest!
+          <i class="fa fa-twitter"></i> &nbsp; Get Latest!
       <% end %>
-    <% end %>
-  </div>
-  <hr/>
-  <div>
-    <% @tweets.each do |tweet| %>
+  <% end %>
 
-        <%= tweet.id%>
-        <%= tweet.content%>
-        <%= tweet.created%>
-        <br>
+  <p>Show all the tweets in the db</p>
+  <div class="card-panel">
+      <% @tweets.each do |tweet| %>
 
-    <% end %>
+          <%= tweet.id%>
+          <%= tweet.content%>
+          <%= tweet.created%>
+          <br>
+
+      <% end %>
   </div>
-</div>
+    </div>
