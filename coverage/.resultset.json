@@ -1,102 +1,23 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/rps/big_hippo/projects/hashrobot/app/helpers/application_helper.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/helpers/static_helper.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/helpers/static_helper.rb": [
         1,
         null
       ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/helpers/tweets_helper.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/helpers/tweets_helper.rb": [
         1,
         null
       ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/helpers/users_helper.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/controllers/pages_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/controllers/tweets_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        null,
-        0,
-        null,
-        null,
-        1,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        0,
-        null,
-        null,
-        1,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/controllers/users_controller.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/controllers/pages_controller.rb": [
         1,
         1,
         null,
@@ -105,13 +26,98 @@
         null,
         null
       ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/models/tweet.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/controllers/tweets_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/models/tweet.rb": [
         1,
         null,
         null,
         null
       ],
-      "/Users/rps/big_hippo/projects/hashrobot/app/models/user.rb": [
+      "/Users/jeffdemers/big_hippo/project3/hashrobot/app/models/user.rb": [
         1,
         null,
         1,
@@ -129,6 +135,6 @@
         null
       ]
     },
-    "timestamp": 1434755653
+    "timestamp": 1434756998
   }
 }
