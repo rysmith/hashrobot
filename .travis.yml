@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.0.0-p481
+branches:
+  only:
+  - master
+install:
+- travis_retry bundle install
+before_script:
+- psql -c 'create database hashrobot_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: oj1mB262ozQopwNNrm9LJkSa4Mo5K5h1xHMmBI/QE8yLKKLqGgiIvcuextC8IDRLJczD1NKTQEV8c7hA1XkbMEqlokMg07IC+vipdckiu1hnmX06npjI8g8XR4oO1BPgG2leTIF9kWnBbB/RYObD/SGw60y+CMEe+S7wzxq4bbkhlHTfW9GSAGvoLVCHwp+oZjQ0GyHpZbfoM2zysYGOW9I/2zLzkLZfD9P1W8o8RajGiVrWmUwHWygxNQ9ykqE+W0kgJZ52PF2p4Rez76baFnpNAtxPC5IQt1my+DJnPG03UOxCXMVlctb9ep/BpgcxmKeHQbM0csvHPNQaE9OPvQ48w0eXZZ2zTogLmMY8Vowy26ZH3gsTomgDR2/sKPhVZ3dja5pHZ6kQwGZiODN3KukVYI9kRJEVvrtTNwv7zq8TC4tBMa9kntfiD7REGTE3DH9ed9phAWCmzuUHOSWiE2qdOrqYm6nu+08qGU7U8AZtZn8lyJEoBjfSOIlq9waS97IXA5Rf+Oms4y8PtnsSHdEW08Hh55wg0zJd185XUPcNADLb4OEQbyQFJeqUBWenXZmYRXptu7pEweHRzQN3v8iJw0Sa+vtYNc9kVTebx+H+ku9wiY9lm34ep1yL6S3g5I8IVBFH649C8l5tiXSsPHWKWTkqL6/vD/PzhTNXirY=
+  app: fathomless-meadow-9258
+  run:
+    - "rake db:migrate"
+    - restart

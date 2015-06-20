@@ -1,16 +1,13 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-
 #materialize css
 gem 'materialize-sass'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -20,7 +17,10 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #hide our API keys
 gem 'figaro'
-
+#access twitter API
+gem 'twitter'
+#save tweets to database
+gem 'grackle'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -33,6 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 #oauth via twitter
 gem 'omniauth-twitter'
+
+#font awesome
+gem 'font-awesome-sass'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,6 +54,19 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # testing
+  gem 'rspec-rails', '~> 3.0.0'
+
+  # model testing
+  gem 'shoulda-matchers', require: false
+
+  # integration testing
+  gem 'capybara'
+
+  gem 'factory_girl_rails'
+
+  gem 'simplecov', :require => false
 end
 
 group :development do
@@ -58,4 +74,3 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
-

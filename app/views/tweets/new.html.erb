@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>This is the page for making new tweets</h3>
+  <p>It will eventually be rolled back into the the standard dashboard</p>
+
+
+  <%= form_tag('/tweets/create')do %>
+    <%= text_field_tag (:tweet_body) %>
+    <%= button_tag(:class => 'btn') do %>
+      <i class="fa fa-twitter"></i> &nbsp; Tweet!
+
+    <% end %>
+  <% end %>
+
+</div>
