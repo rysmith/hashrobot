@@ -1,8 +1,11 @@
 <div class="container">
-  <h2>Create a HTTP Request to Monkey Learn</h2>
-  <p>Input the text you would like to get a category for.</p>
-  <%= form_tag '/categories/create' do %>
-    <%= text_field(:request, :text_list) %>
-    <div><%= submit_tag 'Submit for Processing', 'class' => 'btn' %></div>
+  <h2>Analyze Tweets</h2>
+  <p>Run the MonkeyLearn analytics on the tweet table</p>
+
+  <%= form_tag('/categories/create')do %>
+    <%= button_tag(:class => 'btn') do %>
+      <i class="fa fa-twitter"></i> &nbsp; Get Latest!
+    <% end %>
   <% end %>
+
 </div>
