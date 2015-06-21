@@ -36,6 +36,8 @@ gem 'omniauth-twitter'
 
 #font awesome
 gem 'font-awesome-sass'
+#convert JSON to hash
+gem 'mash'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
