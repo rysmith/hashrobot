@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
+
     @categories = Category.all
   end
 
@@ -43,10 +44,11 @@ private
       tweet_content << tweet['content']
     end
 
+    # return the content of each tweet
     tweet_content
   end
 
-  # anaylyse_tweets expects an array of strings
+  # analyse_tweets expects an array of strings
   # returns a JSON object
   def analyze_tweets(tweet_list)
 
@@ -77,7 +79,7 @@ private
   end
 
   # save the results from the monkeylearn API to the categories table
-  def save_tweets(processed_tweets)
+  def save_tweets(anaylyzed_tweets)
     result = tweet_category[0][:result]
 
     result.each do |t|
