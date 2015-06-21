@@ -16,8 +16,7 @@ class CategoriesController < ApplicationController
 
     tweet_category = analyze_tweets(all_tweets)
 
-    puts tweet_category
-    # save_tweets(tweet_category)
+    save_tweets(tweet_category)
 
     redirect_to categories_path
   end
@@ -63,10 +62,7 @@ private
 
     # set POST data with the content of each tweet
     # the monkeylean API expects an array of strings
-    request.body = {
-        text_list:
-            tweet_list
-    }.to_json
+    request.body = {text_list: tweet_list}.to_json
 
     # set the response type to JSON in the header
     request.add_field("Content-Type", "application/json")
@@ -79,12 +75,18 @@ private
   end
 
   # save the results from the monkeylearn API to the categories table
-  def save_tweets(anaylyzed_tweets)
-    result = tweet_category[0][:result]
+  def save_tweets(analyzed_tweets)
 
+    #parse the monkeylearn response usable JSON
+    hash_tweets =  JSON.parse analyzed_tweets
+
+    #extract the arrays of categories
+    result = hash_tweets['result']
+
+    #use only the first category result for each tweet and save it to the categories table
     result.each do |t|
 
-      Category.create({:probability => t[0][:probability], :category => t[0][:label] })
+      Category.create({:probability => t[0]['probability'], :category => t[0]['label'] })
     end
   end
 end
