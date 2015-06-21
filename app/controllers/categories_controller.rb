@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
-    @tweets = Tweet.all.order(created: :desc)
+    @categories = Category.all
   end
 
 
