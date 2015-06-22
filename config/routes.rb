@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    resources :categories, except: [:new, :edit] 
+  end
+
   get 'tweets/index' => 'tweets#index', as: :tweets
+
+  # get 'tweets/get_latest' => 'tweets#get_latest', as: :get_latest
+
 
   root 'pages#index'
 

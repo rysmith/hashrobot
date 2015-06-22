@@ -4,6 +4,11 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all
   end
 
+  def get_latest
+    @tweets = Tweet.last 5
+    render json: @tweets
+  end
+
   def show
 
   end
