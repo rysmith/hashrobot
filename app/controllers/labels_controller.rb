@@ -1,8 +1,8 @@
-class CategoriesController < ApplicationController
+class LabelsController < ApplicationController
 
   def index
 
-    @categories = Category.all
+    @labels = Label.all
   end
 
 
@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
 
     save_tweets(tweet_category)
 
-    redirect_to categories_path
+    redirect_to labels_path
   end
 
   def show
@@ -118,7 +118,7 @@ private
     #use only the first category result for each tweet and save it to the categories table
     result.each do |t|
 
-      Category.create({:probability => t[0]['probability'], :category => t[0]['label'], :tweet_id => t[0]['id'] })
+      Label.create({:probability => t[0]['probability'], :label => t[0]['label'], :tweet_id => t[0]['id'] })
     end
   end
 end

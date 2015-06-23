@@ -1,8 +1,8 @@
-class CreateCategories < ActiveRecord::Migration
+class CreateLabels < ActiveRecord::Migration
   def change
-    create_table :categories do |t|
+    create_table :labels do |t|
       t.integer :tweet_id
-      t.string :category
+      t.string :label
       t.float :probability
       t.string :hashtag
       t.integer :count

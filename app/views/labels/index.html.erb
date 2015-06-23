@@ -4,11 +4,11 @@
   <p>Find me in app/views/categories/index.html.erb</p>
 
   <div class="card-panel">
-    <% @categories.each do |cat| %>
+    <% @labels.each do |cat| %>
 
       <%= cat.id %>
       <%= cat.tweet_id %>
-      <%= cat.category%>
+      <%= cat.label%>
       <%= cat.probability%>
       <br>
 

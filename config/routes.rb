@@ -3,11 +3,6 @@ Rails.application.routes.draw do
   #send users to the welcome page upon arrival
   root 'pages#index'
 
-  #monkey learn
-  get 'categories/index'
-
-  get 'categories/show'
-
   #basic static pages, welcome, about, and contact
   get 'pages/index' => 'pages#index', as: :welcome
 
@@ -19,13 +14,13 @@ Rails.application.routes.draw do
   #delete session for twitter oauth
   delete '/logout' => 'sessions#destroy'
 
-  get 'categories/index' => 'categories#index', as: :categories
+  get 'labels/index' => 'labels#index', as: :labels
 
-  get 'categories/show/:id' => 'categories#show', as: :category
+  get 'labels/show/:id' => 'labels#show', as: :label
 
-  get 'categories/new' => 'categories#new', as: :new_category
+  get 'labels/new' => 'labels#new', as: :new_label
 
-  post 'categories/create' => 'categories#create'
+  post 'labels/create' => 'labels#create'
 
   #get all the current tweet in our db
   get 'tweets/index' => 'tweets#index', as: :tweets
