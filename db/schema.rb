@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150622071659) do
+ActiveRecord::Schema.define(version: 20150623012552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20150622071659) do
     t.datetime "updated_at", null: false
     t.string   "name"
   end
+
+  create_table "category_tags", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "tag_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "category_tags", ["category_id"], name: "index_category_tags_on_category_id", using: :btree
+  add_index "category_tags", ["tag_id"], name: "index_category_tags_on_tag_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -51,4 +61,6 @@ ActiveRecord::Schema.define(version: 20150622071659) do
   add_index "users", ["provider"], name: "index_users_on_provider", using: :btree
   add_index "users", ["uid"], name: "index_users_on_uid", using: :btree
 
+  add_foreign_key "category_tags", "categories"
+  add_foreign_key "category_tags", "tags"
 end

@@ -1,3 +1,4 @@
 class Tag < ActiveRecord::Base
-	belongs_to :category;
+	has_many :category_tags
+	has_many :categories, through: :category_tags
 end
