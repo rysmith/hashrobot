@@ -115,7 +115,7 @@ private
     response = JSON.parse http.request(request).body
   end
 
-  # once the tweets have been processed
+  # once the tweets have been processed add the tweet id back in
   def inject_tweet_id (response, tweet_id)
 
     i = 0
@@ -127,6 +127,7 @@ private
     end
   end
 
+  # once the tweets have been processed extract and add hash tags
   def inject_tweet_tag (response, tweet_tags)
 
     i = 0
