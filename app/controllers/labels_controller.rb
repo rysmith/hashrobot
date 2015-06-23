@@ -39,7 +39,7 @@ private
     tweet_content = []
 
     # get all the tweets from the db
-    tweets = tweets_table.all.order(created: :desc)
+    tweets = tweets_table.connection.execute("SELECT * FROM Tweets WHERE content LIKE '%#%' ORDER BY created DESC;")
 
     # extract the content for each tweet and push it to tweet_content
     tweets.each do |tweet|
@@ -58,7 +58,7 @@ private
     tweet_id = []
 
     # get all the tweets from the db
-    tweets = tweets_table.all.order(created: :desc)
+    tweets = tweets_table.connection.execute("SELECT * FROM Tweets WHERE content LIKE '%#%' ORDER BY created DESC;")
 
     # extract the id for each tweet and push it to tweet_id
     tweets.each do |tweet|
