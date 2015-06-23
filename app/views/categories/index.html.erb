@@ -6,7 +6,8 @@
   <div class="card-panel">
     <% @categories.each do |cat| %>
 
-      <%= cat.id%>
+      <%= cat.id %>
+      <%= cat.tweet_id %>
       <%= cat.category%>
       <%= cat.probability%>
       <br>
