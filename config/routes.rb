@@ -5,8 +5,6 @@ Rails.application.routes.draw do
     resources :categories, except: [:new, :edit] 
   end
 
-  get 'tweets/index' => 'tweets#index', as: :tweets
-
   #send users to the welcome page upon arrival
   root 'pages#index'
 
