@@ -12,17 +12,21 @@ class LabelsController < ApplicationController
 
   def create
 
-    all_tweets = compile_tweets(Tweet)
+    tweet_content = compile_tweet_content(Tweet)
+
+    tweet_tag = compile_tweet_tags(tweet_content)
 
     tweet_id = compile_tweet_id(Tweet)
 
-    response = analyze_tweets(all_tweets)
+    response = analyze_tweets(tweet_content)
 
-    tweet_category = inject_tweet_id(response, tweet_id)
+    tweet_category_id = inject_tweet_id(response, tweet_id)
 
-    save_tweets(tweet_category)
+    tweet_category_id_tag = inject_tweet_tag(tweet_category_id, tweet_tag)
 
-    redirect_to labels_path
+    save_tweets(tweet_category_id_tag)
+
+    redirect_to new_label_path
   end
 
   def show
@@ -33,7 +37,7 @@ private
 
   # compile_tweets assumes your tweet_table has a 'content' attribute
   # returns an array of strings
-  def compile_tweets(tweets_table)
+  def compile_tweet_content(tweets_table)
 
     # create an empty array to store the content of each tweet
     tweet_content = []
@@ -68,6 +72,20 @@ private
 
     # return the id of each tweet
     tweet_id
+  end
+
+  def compile_tweet_tags(tweet_content)
+    # create an empty array to store the content of each tweet
+    tweet_tags = []
+
+    # extract the content for each tweet and push it to tweet_content
+    tweet_content.each do |tweet|
+
+      tweet_tags << tweet.scan(/#[a-z1-9A-Z]+/)
+    end
+
+    # return the content of each tweet
+    tweet_tags
   end
 
   # analyse_tweets expects an array of strings
@@ -109,6 +127,17 @@ private
     end
   end
 
+  def inject_tweet_tag (response, tweet_tags)
+
+    i = 0
+
+    response.each do |t|
+
+      t[0].merge!("hashtag" => tweet_tags[i])
+      i += 1
+    end
+  end
+
   # save the results from the monkeylearn API to the categories table
   def save_tweets(analyzed_tweets)
 
@@ -118,7 +147,7 @@ private
     #use only the first category result for each tweet and save it to the categories table
     result.each do |t|
 
-      Label.create({:probability => t[0]['probability'], :label => t[0]['label'], :tweet_id => t[0]['id'] })
+      Label.create({:probability => t[0]['probability'], :label => t[0]['label'], :tweet_id => t[0]['id'], :hashtag => t[0]['hashtag'] })
     end
   end
 end

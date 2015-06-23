@@ -4,7 +4,7 @@ class CreateLabels < ActiveRecord::Migration
       t.integer :tweet_id
       t.string :label
       t.float :probability
-      t.string :hashtag
+      t.string :hashtag, array:true, default:[]
       t.integer :count
 
       t.timestamps null: false

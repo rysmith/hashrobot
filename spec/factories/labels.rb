@@ -1,9 +1,9 @@
 FactoryGirl.define do
-  factory :category do
+  factory :label do
     tweet_id 1
-category "MyString"
+label "MyString"
 probability 1.5
-hashtag "MyString"
+hashtag ""
 count 1
   end
 
