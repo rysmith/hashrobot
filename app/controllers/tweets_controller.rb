@@ -5,11 +5,6 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all.order(created: :desc)
   end
 
-  def get_latest
-    @tweets = Tweet.last 5
-    render json: @tweets
-  end
-
   def show
 
   end
@@ -19,6 +14,7 @@ class TweetsController < ApplicationController
   end
 
   def get_latest
+
 
     tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '34.101509,-118.32691,5mi').take(50)
 

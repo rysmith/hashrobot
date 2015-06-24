@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623012552) do
+
+ActiveRecord::Schema.define(version: 20150623050908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +38,16 @@ ActiveRecord::Schema.define(version: 20150623012552) do
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
     t.string   "name"
+
+  create_table "labels", force: :cascade do |t|
+    t.integer  "tweet_id"
+    t.string   "label"
+    t.float    "probability"
+    t.string   "hashtag",     default: [],              array: true
+    t.integer  "count"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+
   end
 
   create_table "tweets", force: :cascade do |t|

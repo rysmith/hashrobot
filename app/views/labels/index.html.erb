@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h1>Categories#index</h1>
+  <p>Find me in app/views/categories/index.html.erb</p>
+
+  <div class="card-panel">
+    <% @labels.each do |cat| %>
+
+      <%= cat.id %>
+      <%= cat.tweet_id %>
+      <%= cat.label%>
+      <%= cat.probability%>
+      <br>
+
+    <% end %>
+  </div>
+</div>

@@ -19,6 +19,14 @@ Rails.application.routes.draw do
   #delete session for twitter oauth
   delete '/logout' => 'sessions#destroy'
 
+  get 'labels/index' => 'labels#index', as: :labels
+
+  get 'labels/show/:id' => 'labels#show', as: :label
+
+  get 'labels/new' => 'labels#new', as: :new_label
+
+  post 'labels/create' => 'labels#create'
+
   #get all the current tweet in our db
   get 'tweets/index' => 'tweets#index', as: :tweets
 
@@ -32,5 +40,4 @@ Rails.application.routes.draw do
   post 'tweets/get_latest' => 'tweets#get_latest'
 
   post 'tweets/get_latest' => 'tweets#get_latest'
-
 end

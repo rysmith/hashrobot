@@ -106,6 +106,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mash (0.1.1)
     materialize-sass (0.96.2)
       sass (~> 3.3)
     memoizable (0.4.2)
@@ -249,6 +250,7 @@ DEPENDENCIES
   grackle
   jbuilder (~> 2.0)
   jquery-rails
+  mash
   materialize-sass
   omniauth-twitter
   pg
