@@ -1,5 +1,7 @@
 class LabelsController < ApplicationController
 
+  before_action :authorize
+
   def index
 
     @labels = Label.all

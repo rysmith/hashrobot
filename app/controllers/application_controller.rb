@@ -11,5 +11,13 @@ private
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+  #restrict access to specific pages without login
+  def authorize
+    unless current_user
+      flash[:error] = 'you must login to see that page'
+      redirect_to welcome_path
+    end
+  end
+
 end
 
