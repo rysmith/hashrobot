@@ -1,7 +1,5 @@
 class LabelsController < ApplicationController
 
-  before_action :authorize
-
   def index
 
     @labels = Label.all
@@ -35,7 +33,7 @@ class LabelsController < ApplicationController
 
   end
 
-private
+  private
 
   # compile_tweets assumes your tweet_table has a 'content' attribute
   # returns an array of strings
