@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150623050908) do
 
   # These are extensions that must be enabled in order to support this database
@@ -32,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150623050908) do
   add_index "category_tags", ["category_id"], name: "index_category_tags_on_category_id", using: :btree
   add_index "category_tags", ["tag_id"], name: "index_category_tags_on_tag_id", using: :btree
 
+  create_table "tags", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.string   "name"
+
   create_table "labels", force: :cascade do |t|
     t.integer  "tweet_id"
     t.string   "label"
@@ -40,13 +47,7 @@ ActiveRecord::Schema.define(version: 20150623050908) do
     t.integer  "count"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-  end
 
-  create_table "tags", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "category_id"
-    t.string   "name"
   end
 
   create_table "tweets", force: :cascade do |t|
