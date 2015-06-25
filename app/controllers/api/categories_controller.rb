@@ -43,22 +43,27 @@ private
 		ent = label_table.connection.execute("SELECT * FROM Labels WHERE label='Entertainment & Recreation' and probability>=0.200;")
 		ent_tags = {}
 		ent.each do |t|
-			ent_tags.merge!(t['hashtag'].gsub("{","").gsub("}","").split(",") => t['probability'].to_f)
+			ent_tags.merge!(t['hashtag'].gsub("{","").gsub("}","").split(",") => t['probability'].to_f + 1)
     end
 
-    ent_tags_sep = {}
+    ent_tags_sep = []
 
-    puts ent_tags
     ent_tags.each do |key, value|
 
       key.each do |k|
 
-        ent_tags_sep.merge!(k => value)
+        ent_tags_sep << "#{k},#{value}".split(",")
       end
     end
 
-    ent_tags_sep
+    ent_tags_sep_final = []
+    ent_tags_sep.each do |e|
 
+      ent_tags_sep_final << [e[0], e[1].to_f]
+    end
+
+    ent_tags_sep_final
+    
 	end
 
 	end
