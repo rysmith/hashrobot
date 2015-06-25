@@ -1,16 +1,36 @@
-<div class="container col s12">
+<div class="container">
 
-  <h1>#Robot #Dash</h1>
+  <h3>Dashboard</h3>
 
-  <%= form_tag('/tweets/get_latest')do %>
+<div class = row>
+  <div class="col s12 m4">
+    <%= form_tag('/tweets/get_latest')do %>
       <%= button_tag(:class => 'btn') do %>
           <i class="fa fa-twitter"></i> &nbsp; Get Tweets
       <% end %>
-  <% end %>
+    <% end %>
+  </div>
 
-  <p>Show all the tweets in the db</p>
+  <div class="col s12 m4">
+    <%= form_tag('/labels/create')do %>
+      <%= button_tag(:class => 'btn') do %>
+          <i class="fa fa-twitter"></i> &nbsp; Categorize Tweets
+      <% end %>
+    <% end %>
+  </div>
 
-  <div class="scroll">
+  <div class="col s12 m4">
+    <%= form_tag('/api/categories/rank_tags')do %>
+      <%= button_tag(:class => 'btn') do %>
+          <i class="fa fa-twitter"></i> &nbsp; Rank Tags
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+  <h5>All Tweets</h5>
+
+  <div class="col s8, scroll">
 
     <% @tweets.each do |tweet| %>
 
@@ -23,26 +43,26 @@
 
   </div>
 
-</div>
+<!--</div>-->
 
-<div class="container">
-  <h2>Analyze Tweets</h2>
-  <p>Run the MonkeyLearn analytics on the tweet table</p>
+<!--<div class="container">-->
+  <!--<h2>Analyze Tweets</h2>-->
+  <!--<p>Run the MonkeyLearn analytics on the tweet table</p>-->
 
-  <%= form_tag('/labels/create')do %>
-      <%= button_tag(:class => 'btn') do %>
-          <i class="fa fa-twitter"></i> &nbsp; Categorize Tweets
-      <% end %>
-  <% end %>
+  <!--<%= form_tag('/labels/create')do %>-->
+      <!--<%= button_tag(:class => 'btn') do %>-->
+          <!--<i class="fa fa-twitter"></i> &nbsp; Categorize Tweets-->
+      <!--<% end %>-->
+  <!--<% end %>-->
 
-  <%= form_tag('/api/categories/rank_tags')do %>
-      <%= button_tag(:class => 'btn') do %>
-          <i class="fa fa-twitter"></i> &nbsp; Rank Hashtags and Update API
-      <% end %>
-  <% end %>
+  <!--<%= form_tag('/api/categories/rank_tags')do %>-->
+      <!--<%= button_tag(:class => 'btn') do %>-->
+          <!--<i class="fa fa-twitter"></i> &nbsp; Rank Hashtags and Update API-->
+      <!--<% end %>-->
+  <!--<% end %>-->
 
 
-</div>
+<!--</div>-->
 
 
 </div>
