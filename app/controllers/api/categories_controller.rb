@@ -41,12 +41,23 @@ module Api
 private
 	def get_categories(label_table)
 		ent = label_table.connection.execute("SELECT * FROM Labels WHERE label='Entertainment & Recreation' and probability>=0.200;")
-		ent_tags = []
+		ent_tags = {}
 		ent.each do |t|
-			ent_tags << "#{t['probability']} => #{t['hashtag']}"
-		end
+			ent_tags.merge!(t['hashtag'].gsub("{","").gsub("}","").split(",") => t['probability'].to_f)
+    end
 
-		ent_tags[1]
+    ent_tags_sep = {}
+
+    puts ent_tags
+    ent_tags.each do |key, value|
+
+      key.each do |k|
+
+        ent_tags_sep.merge!(k => value)
+      end
+    end
+
+    ent_tags_sep
 
 	end
 
