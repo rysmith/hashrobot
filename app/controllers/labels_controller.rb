@@ -26,7 +26,7 @@ class LabelsController < ApplicationController
 
     save_tweets(tweet_category_id_tag)
 
-    redirect_to new_label_path
+    redirect_to dashboard_path
   end
 
   def show

@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
   def get_latest
 
 
-    tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '34.101509,-118.32691,5mi').take(50)
+    tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '34.101509,-118.32691,5mi').take(25)
 
     tweets.each do |t|
 
@@ -31,7 +31,7 @@ class TweetsController < ApplicationController
       end
     end
 
-    redirect_to tweets_path
+    redirect_to dashboard_path
   end
 
   def create

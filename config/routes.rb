@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'pages/about' => 'pages#about', as: :about
 
+  get 'pages/dashboard' => 'pages#dashboard', as: :dashboard
+
   #create a new session for twitter oauth
   get '/auth/:provider/callback' => 'sessions#create', as: :twitter
 

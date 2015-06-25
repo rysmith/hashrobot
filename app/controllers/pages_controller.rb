@@ -4,4 +4,9 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def dashboard
+    @tweets = Tweet.all.order(created: :desc)
+  end
+
 end

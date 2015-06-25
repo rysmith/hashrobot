@@ -1,6 +1,6 @@
 <div class="container col s12">
 
-  <h1>#Robot Command Central</h1>
+  <h1>#Robot #Dash</h1>
 
   <%= form_tag('/tweets/get_latest')do %>
       <%= button_tag(:class => 'btn') do %>
@@ -10,19 +10,18 @@
 
   <p>Show all the tweets in the db</p>
 
-<div class="scroll">
+  <div class="scroll">
 
-      <% @tweets.each do |tweet| %>
+    <% @tweets.each do |tweet| %>
 
-          <%= tweet.id%>
-          <%= tweet.content%>
-          <%= tweet.created%>
-          <br>
+        <%= tweet.id%>
+        <%= tweet.content%>
+        <%= tweet.created%>
+        <br>
 
-      <% end %>
+    <% end %>
 
-</div>
-
+  </div>
 
 </div>
 
@@ -41,6 +40,9 @@
           <i class="fa fa-twitter"></i> &nbsp; Rank Hashtags and Update API
       <% end %>
   <% end %>
+
+
+</div>
 
 
 </div>

@@ -74,4 +74,6 @@ ActiveRecord::Schema.define(version: 20150623050908) do
 
   add_foreign_key "category_tags", "categories"
   add_foreign_key "category_tags", "tags"
+  end
 end
+
