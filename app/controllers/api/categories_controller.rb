@@ -26,13 +26,29 @@ module Api
 		def create
 			
 		end
+
+		def rank_tags
+			print get_categories(Label)
+			redirect_to new_label_path
+		end
+
 		def update
 			
 		end
 		def destroy
 			
 		end
+private
+	def get_categories(label_table)
+		ent = label_table.connection.execute("SELECT * FROM Labels WHERE label='Entertainment & Recreation' and probability>=0.200;")
+		ent_tags = []
+		ent.each do |t|
+			ent_tags << "#{t['probability']} => #{t['hashtag']}"
+		end
 
+		ent_tags[1]
+
+	end
 
 	end
 end

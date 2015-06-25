@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get 'labels/new' => 'labels#new', as: :new_label
 
   post 'labels/create' => 'labels#create'
+  
+  post 'api/categories/rank_tags' => 'api/categories#rank_tags'
 
   #get all the current tweet in our db
   get 'tweets/index' => 'tweets#index', as: :tweets
