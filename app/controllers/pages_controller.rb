@@ -9,4 +9,9 @@ class PagesController < ApplicationController
     @tweets = Tweet.all.order(created: :desc)
   end
 
+  def hashboard
+    uri = HTTParty.get 'http://localhost:3000/api/categories'
+    render json: JSON.parse(uri.body)
+  end
+
 end
