@@ -21,10 +21,10 @@ module Api
       category = Category.all
 
       category.each do |c|
-          save_tags(get_ranking(c['id']))
+          save_tags(get_ranking(c['name']))
       end
 
-			redirect_to new_label_path
+			redirect_to dashboard_path
 		end
 
 private
@@ -38,7 +38,7 @@ private
 
     def get_categories(label_table, category)
 
-      cat = label_table.connection.execute("SELECT * FROM Labels WHERE id='#{category}' and probability>=0.200;")
+      cat = label_table.connection.execute("SELECT * FROM Labels WHERE label='#{category}' and probability>=0.200;")
       cat_tags = {}
 
       cat.each do |t|
@@ -92,6 +92,41 @@ private
 
     def determine_winners(get_tag_rank, category)
 
+      case category
+        when "Animals"
+          category_id = 1
+        when "Beauty & Style"
+          category_id = 2
+        when "Business & Finance"
+          category_id = 3
+        when "Computers & Internet"
+          category_id = 4
+        when "Consumer Electronics"
+          category_id = 5
+        when "Education"
+          category_id = 6
+        when "Entertainment & Recreation"
+          category_id = 7
+        when "Environment"
+          category_id = 8
+        when "Food & Drink"
+          category_id = 9
+        when "Gardening"
+          category_id = 10
+        when "Health & Medicine"
+          category_id = 11
+        when "Home"
+          category_id = 12
+        when "Humanities"
+          category_id = 13
+        when "Science & Mathematics"
+          category_id = 14
+        when "Society"
+          category_id = 15
+        when "Travel"
+          category_id = 16
+      end
+
        cat_winners = []
 
        get_tag_rank.each do |t|
@@ -102,7 +137,7 @@ private
          end
        end
 
-       cat_winners = {category => cat_winners }
+       cat_winners = {category_id => cat_winners }
      end
 
     def save_tags(winners)
