@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150623050908) do
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
     t.string   "name"
+  end
 
   create_table "labels", force: :cascade do |t|
     t.integer  "tweet_id"
@@ -47,7 +48,6 @@ ActiveRecord::Schema.define(version: 20150623050908) do
     t.integer  "count"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-
   end
 
   create_table "tweets", force: :cascade do |t|
@@ -74,6 +74,6 @@ ActiveRecord::Schema.define(version: 20150623050908) do
 
   add_foreign_key "category_tags", "categories"
   add_foreign_key "category_tags", "tags"
-  end
 end
+
 
