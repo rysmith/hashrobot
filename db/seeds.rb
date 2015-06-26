@@ -14,7 +14,7 @@ Category.create([
                     { name: "Consumer Electronics"},
                     { name: "Education"},
                     { name: "Entertainment & Recreation"},
-                    { name: "Environmaent"},
+                    { name: "Environment"},
                     { name: "Food & Drink"},
                     { name: "Gardening"},
                     { name: "Health & Medicine"},
