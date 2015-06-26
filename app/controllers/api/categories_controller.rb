@@ -46,6 +46,14 @@ private
         cat_tags.merge!(t['probability'].to_f + 1 => t['hashtag'].gsub("{","").gsub("}","").split(","))
       end
 
+      cat_tags.each do |key, value|
+
+        value.each do |v|
+          v.downcase!
+        end
+
+      end
+
       cat_tags_sep = []
 
       cat_tags.each do |key, value|
@@ -133,11 +141,11 @@ private
 
          if t[2] >=1.35
 
-           cat_winners << t[1]
+           cat_winners << [t[1], t[2]]
          end
        end
 
-       cat_winners = {category_id => cat_winners }
+       winners = {category_id => cat_winners }
      end
 
     def save_tags(winners)
@@ -149,7 +157,7 @@ private
           value.each do |v|
 
             @category = Category.find(key)
-            @category.tags << Tag.create( :name => v, :category_id => key)
+            @category.tags << Tag.create( :name => v[0], :category_id => key, :rank => v[1])
           end
 
         else
