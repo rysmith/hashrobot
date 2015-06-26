@@ -1,7 +1,5 @@
 class TweetsController < ApplicationController
 
-  before_action :authorize
-
   def index
 
     @tweets = Tweet.all.order(created: :desc)

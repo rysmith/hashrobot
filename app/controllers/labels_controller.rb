@@ -5,11 +5,6 @@ class LabelsController < ApplicationController
     @labels = Label.all
   end
 
-
-  def new
-
-  end
-
   def create
 
     tweet_content = compile_tweet_content(Tweet)
@@ -29,11 +24,7 @@ class LabelsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def show
-
-  end
-
-  private
+private
 
   # compile_tweets assumes your tweet_table has a 'content' attribute
   # returns an array of strings

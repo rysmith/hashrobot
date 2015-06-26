@@ -1,23 +1,23 @@
 module Api
 	class CategoriesController < ApplicationController
+
 		protect_from_forgery with: :null_session
 
 		def index
-			# categories = { categories: ['Home', 'Entertainment', 'Pets'] }
+
 			@categories = Category.all
 			render json: @categories 
-		end
+    end
+
 		def show
-			category = Category.find(params[:id])	 #(if we're doing it by id)
-			# Category.where(name: params[:id]).first (if we're doing it by name)
+
+			category = Category.find(params[:id])
 			tags = category.tags
 			render json: tags
 		end
-		def create
-			
-		end
 
 		def rank_tags
+
       category = Category.all
 
       category.each do |c|
@@ -27,12 +27,6 @@ module Api
 			redirect_to new_label_path
 		end
 
-		def update
-			
-		end
-		def destroy
-			
-		end
 private
 
     def get_ranking(category)
@@ -114,18 +108,20 @@ private
     def save_tags(winners)
 
       winners.each do |key, value|
+
         if value.length > 0
+
           value.each do |v|
+
             @category = Category.find(key)
             @category.tags << Tag.create( :name => v, :category_id => key)
           end
+
         else
+
           puts "category #{key} has no tags"
         end
-
       end
-
-
     end
 	end
 end
