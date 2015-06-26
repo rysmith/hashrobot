@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20150623050908) do
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
     t.string   "name"
-  end
 
   end
 
