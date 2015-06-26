@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20150623050908) do
     t.integer  "category_id"
     t.string   "name"
 
+  end
+
   create_table "labels", force: :cascade do |t|
     t.integer  "tweet_id"
     t.string   "label"

@@ -21,7 +21,7 @@ module Api
       category = Category.all
 
       category.each do |c|
-          print get_ranking(c['name'])
+          save_tags(get_ranking(c['id']))
       end
 
 			redirect_to new_label_path
@@ -44,7 +44,7 @@ private
 
     def get_categories(label_table, category)
 
-      cat = label_table.connection.execute("SELECT * FROM Labels WHERE label='#{category}' and probability>=0.200;")
+      cat = label_table.connection.execute("SELECT * FROM Labels WHERE id='#{category}' and probability>=0.200;")
       cat_tags = {}
 
       cat.each do |t|
@@ -72,7 +72,7 @@ private
       cat_tags_sep_final
     end
 
-     def get_tag_rank(get_categories)
+    def get_tag_rank(get_categories)
 
        ranked_hashtags = []
 
@@ -96,7 +96,7 @@ private
        ranked_hashtags
      end
 
-     def determine_winners(get_tag_rank, category)
+    def determine_winners(get_tag_rank, category)
 
        cat_winners = []
 
@@ -111,7 +111,19 @@ private
        cat_winners = {category => cat_winners }
      end
 
-    def save_tags
+    def save_tags(winners)
+
+      winners.each do |key, value|
+        if value.length > 0
+          value.each do |v|
+            @category = Category.find(key)
+            @category.tags << Tag.create( :name => v, :category_id => key)
+          end
+        else
+          puts "category #{key} has no tags"
+        end
+
+      end
 
 
     end
