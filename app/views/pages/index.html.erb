@@ -1,41 +1,45 @@
-<div class="container">
+<div class="parallax-container">
 
-  <div id="welcome-header">
-    <h2>Welcome to #Robot</h2>
-    <h5>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</h5>
+  <div class="main-home" center>
+    #Robot
+
+        <% if current_user %>
+        <%= link_to 'Log Out', logout_path, method: :delete %>
+        <% else %>
+        <%=	link_to 'Login with Twitter', '/auth/twitter' %>
+        <% end %>
   </div>
 
-  <div class="row">
-    <div class="col s6">
-      <p><%=	image_tag 'hashrobot.png' %></p>
-    </div> <!-- col s6 end -->
+  <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
+</div>
+<div class="section info">
+  <div class="row container">
 
-    <div class="col s6">
-      <% if current_user %>
-        &nbsp;
-      <div class ="card-panel">>
-        <h6>Some info about the current_user</h6>
-        <ul>
-          <li><strong>Name:</strong> <%= current_user.name %></li>
-          <li><strong>Provider:</strong> <%= current_user.provider %></li>
-          <li><strong>uID:</strong> <%= current_user.uid %></li>
-          <li><strong>Location:</strong> <%= current_user.location %></li>
-          <li><strong>Avatar URL:</strong> <%= current_user.image_url %></li>
-          <li><strong>URL:</strong> <%= current_user.url %></li>
-        </ul>
+        <div class = row>
+          <div class="col s12 m4 center">
+            <h4 class="main_title">Purpose</h4>
+                <p class="about">#Robot will give the user the best hast tag choices based on a chosen category. Users can then tweet right from the application with the suggested hash tags.
+                </p>
+          </div>
+          <div class="col s12 m4 center">
+            <h4 class="main_title">Design</h4>
+                <p class="about"> #Robot is designed to ingest large numbers of tweets from Twitter's API.
+                    It then passes them to the Monkey Learn API to get the relevant category for a particular tweet.
+                    It then finds the most used hash tags for a particular category and returns those to a user upon request.
+                </p>
+          </div>
+          <div class="col s12 m4 center">
+            <h4 class="main_title">Creators</h4>
+                <p class="about"> #Robot was created by Ryan Smith, Jeff Demers, and Chris Wu while taking General Assembly's 12-week Web Development Immersive program.
+                </p>
+          </div>
+        </div>
+  </div>
+</div>
+      <div class="parallax-container">
+        <div class="parallax"><%=	image_tag 'robot_new_black.png' %></div>
       </div>
-    </div> <!-- col s6 end -->
 
-
-
-    <% end %>
-
-
-
-  </div> <!-- row end -->
-
-
-</div> <!-- container end -->
 
 
 
