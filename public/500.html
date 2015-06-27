@@ -1,66 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
     margin: 0;
   }
+  #navbar {
+    width: 100%;
+    height: 64px;
+    background: #64B5F6; 
+  }
+  .robot{
+    margin-top: 88px;
+    margin-left: 361px;
+  }
+  .led {
+    position: absolute;
+    left: 590px; top: 151px;  
+    width: 47px; height: 35px;
+    border-radius: 25%;
+    background-color: rgb(255, 136, 115);
+    box-shadow: inset 0px 1px 0px rgba(0,0,0,.1);
+    -webkit-animation: led .5s infinite;
+    -moz-animation: led .5s infinite;
+    -ms-animation: led .5s infinite;
+    -o-animation: led .5s infinite;
+    animation: led .5s infinite;
+  }
+  @-webkit-keyframes led {
+  from {
+    opacity:1;
+  }
+  
+  to {
+    opacity:.1;
+  }
+}
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+@-moz-keyframes led {
+  from {
+    opacity:1;
+  }
+  
+  to {
+    opacity:.1;
+  }
+}
+
+@-ms-keyframes led {
+  from {
+    opacity:1;
+  }
+  
+  to {
+    opacity:.1;
+  }
+}
+
+@-o-keyframes led {
+  from {
+    opacity:1;
+  }
+  
+  to {
+    opacity:.1;
+  }
+}
+
+@keyframes led {
+  from {
+    opacity:1;
+  }
+  
+  to {
+    opacity:.1;
+  }
+}
+  .dialog {
+    width: 600px;
+    margin: 0 auto;
   }
 
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  #hashy {
+    margin-left: 220px;
   }
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
+  <!-- This file lives in public/404.html -->
+<header>
+  <div id="navbar">
+    <a href="http://www.hashrobot.com"><img src="http://i.imgur.com/jCZ7R3m.png" alt="#Robot" id="hashy"></a>
+  </div>
+</header>
+
+
+<div class="led"></div>
+<div class="robot">
+  <a href="http://www.hashrobot.com"><img src="http://i.imgur.com/N6ikMlK.png" alt="500"></a>
+</div>
+
+
+
+
+
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>Something went wrong.</h1>
+      <p>You may have mistyped the address or the page may have moved.</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>
