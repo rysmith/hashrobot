@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:warning] = 'There was an error while trying to authenticate you...'
     end
 
-    redirect_to root_path
+    redirect_to hashboard_path
   end
 
   def destroy
