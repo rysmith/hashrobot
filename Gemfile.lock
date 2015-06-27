@@ -93,9 +93,6 @@ GEM
     http (0.6.4)
       http_parser.rb (~> 0.6.0)
     http_parser.rb (0.6.0)
-    httparty (0.11.0)
-      multi_json (~> 1.0)
-      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
@@ -118,7 +115,6 @@ GEM
     mini_portile (0.6.2)
     minitest (5.7.0)
     multi_json (1.11.0)
-    multi_xml (0.5.5)
     multipart-post (2.0.0)
     naught (1.0.0)
     nokogiri (1.6.6.2)
@@ -252,7 +248,6 @@ DEPENDENCIES
   figaro
   font-awesome-sass
   grackle
-  httparty (= 0.11.0)
   jbuilder (~> 2.0)
   jquery-rails
   mash

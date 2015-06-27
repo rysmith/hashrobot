@@ -1,4 +1,25 @@
 <div class="container">
   <h3>Welcome to the #Board</h3>
+  <div class="result"></div>
+
+  <!-- Dropdown Trigger -->
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1' id="category-dropdown">Pick a Category</a>
+
+  <!-- Dropdown Structure -->
+  <div class="category-picker">
+    <ul id='dropdown1' class='dropdown-content'></ul>
+  </div>
+
+  <div class="tag-results"></div>
+
+  <div class="tweet-box">
+    <%= form_tag('/tweets/create')do %>
+      <%= text_field_tag (:tweet_body) %>
+      <%= button_tag(:class => 'btn') do %>
+        <i class="fa fa-twitter"></i> &nbsp; Tweet!
+      <% end %>
+    <% end %>
+  </div>
+
 
 </div>

@@ -33,8 +33,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 #oauth via twitter
 gem 'omniauth-twitter'
-#get some formatted data from an API
-gem 'httparty', '0.11.0'
 #font awesome
 gem 'font-awesome-sass'
 #convert JSON to hash
