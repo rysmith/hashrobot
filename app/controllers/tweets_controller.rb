@@ -35,6 +35,7 @@ class TweetsController < ApplicationController
   def create
 
     client.update(tweet_params[:tweet_body])
+
     redirect_to new_tweet_path
   end
 
@@ -51,8 +52,8 @@ class TweetsController < ApplicationController
 
       config.consumer_key = Figaro.env.twitter_key
       config.consumer_secret = Figaro.env.twitter_secret
-      config.access_token = Figaro.env.access_token
-      config.access_token_secret = Figaro.env.access_token_secret
+      config.access_token = current_user.token
+      config.access_token_secret = current_user.secret
     end
   end
 end
