@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Welcome to the #Board</h3>
+  <h3 class="center">Welcome to the #Board</h3>
   <div class="result"></div>
 
   <!-- Dropdown Trigger -->
@@ -14,12 +14,13 @@
 
   <div class="tweet-box">
     <%= form_tag('/tweets/create')do %>
-      <%= text_field_tag (:tweet_body) %>
+      <%= text_field_tag :tweet_body, nil, :placeholder => "Enter tweet here" %>
       <%= button_tag(:class => 'btn') do %>
        <i class="fa fa-twitter tooltipped" data-position="top" data-delay="5" data-tooltip="Send a tweet!"></i> &nbsp; Tweet!
       <% end %>
     <% end %>
   </div>
+  <br>
 
 
 </div>

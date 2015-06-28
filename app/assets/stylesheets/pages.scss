@@ -12,6 +12,13 @@
   padding-top: 20px;
 }
 
+.tag-results .card {
+  padding: 5px;
+  text-align: center;
+  background: #8E2A92;
+  color: white;
+}
+
 .creators h4 {
   margin-top: 50px;
 }
@@ -61,7 +68,7 @@
   background-color: #00B4BF;
 }
 
-.jumbotron-header, h4, h2 {
+.jumbotron-header, h4, h2, h3 {
   font-family: 'Play', sans-serif;
 }
 
