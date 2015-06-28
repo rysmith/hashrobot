@@ -8,7 +8,7 @@
   <div class="section info jumbotron">
     <div class="row container">
 
-      <div class = row>
+      <div class ="row">
         <div class="col s12 m12 center">
           <h1 class="jumbotron-header">#Robot</h1>
           <h5>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</h5>
@@ -20,43 +20,62 @@
             <% end %>
           <% end %>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
-</div>
+          </div> <!-- col s12 m12 center -->
+        </div> <!-- row -->
+      </div> <!-- row container -->
+    </div> <!-- section  -->
+  </div> <!-- parallax -->
+<div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
 <div class="section info">
   <div class="row container">
+    <div class = row>
 
-        <div class = row>
-          <div class="col s12 m4 center">
-            <h4 class="main_title">Purpose</h4>
-                <p class="about">#Robot will give the user the best hast tag choices based on a chosen category. Users can then tweet right from the application with the suggested hash tags.
-                </p>
-          </div>
-          <div class="col s12 m4 center">
-            <h4 class="main_title">Design</h4>
-                <p class="about"> #Robot is designed to ingest large numbers of tweets from Twitter's API.
-                    It then passes them to the Monkey Learn API to get the relevant category for a particular tweet.
-                    It then finds the most used hash tags for a particular category and returns those to a user upon request.
-                </p>
-          </div>
-          <div class="col s12 m4 center">
-            <h4 class="main_title">Creators</h4>
-                <p class="about"> #Robot was created by Ryan Smith, Jeff Demers, and Chris Wu while taking General Assembly's 12-week Web Development Immersive program.
-                </p>
-          </div>
-        </div>
-  </div>
-</div>
+      <div class="col s12 m6 center">
+        <h4 class="main_title">Purpose</h4>
+            <p class="about">#Robot will give the user the best hast tag choices based on a chosen category. Users can then tweet right from the application with the suggested hash tags.
+            </p>
+      </div>
+      <div class="col s12 m6 center">
+        <h4 class="main_title">Design</h4>
+            <p class="about"> #Robot is designed to ingest large numbers of tweets from Twitter's API.
+                It then passes them to the Monkey Learn API to get the relevant category for a particular tweet.
+                It then finds the most used hash tags for a particular category and returns those to a user upon request.
+            </p>
+      </div>
+
+    </div> <!-- row div -->
+  </div> <!-- row container div -->
+</div> <!-- section info div -->
 
 <div class="parallax-container">
-  <div class="parallax"><%=	image_tag 'robot_new_black.png' %></div>
+  <div class="parallax"><%=	image_tag 'creators_bg.png' %></div>
 </div>
 
+<div class="section info">
+  <div class="row container">
+    <div class ="row">
 
+      <div class="col s12 m12 center">
+        <h4 class="main_title">Creators</h4>
+            <div class="col s12 m4 center">
+            <h5 class="name">Ryan Smith</h5>
+            <p class="creators"><%= image_tag 'ryan_head.png' %></p>
+          </div>
+          <div class="col s12 m4 center">
+            <h5 class="name">Jeff Demers</h5>
+            <p class="creators"><%= image_tag 'jeff_head.png' %></p>
+          </div>
+          <div class="col s12 m4 center">
+            <h5 class="name">Chris Wu</h5>
+            <p class="creators"><%= image_tag 'chris_head.png' %></p>
+          </div>
+      </div> <!-- col s12 m12 center -->
 
+    </div> <!-- row -->
+  </div> <!-- row container -->
+</div> <!-- section info -->
 
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag 'colorful-robots.jpg' %></div>
+</div>
 
