@@ -1,52 +1,61 @@
-<div class="parallax-container1">
+<div class="parallax-container parallax-container-0">
+
   <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
 </div>
 
-<div class="parallax-container">
-
-
-  <div class="section info jumbotron">
-    <div class="row container">
-
-      <div class = row>
-        <div class="col s12 m12 center">
-          <h1 class="jumbotron-header">#Robot</h1>
-          <h5>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</h5>
-          <% if current_user %>
-            <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
-          <% else %>
-            <%= button_tag(:class => 'waves-effect waves-light btn-large welcome-btn') do %>
-              <a href="/auth/twitter"><i class="fa fa-twitter-square"></i> &nbsp; Login with Twitter</a>
-            <% end %>
+<div class="section info jumbotron">
+  <div class="row container">
+    <div class = row>
+      <div class="col s12 m12 center">
+        <h1 class="jumbotron-header">#Robot</h1>
+        <h5>Choosing the right hashtags can be hard.  Let #Robot choose them for you.</h5>
+        <% if current_user %>
+          <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
+        <% else %>
+          <%= button_tag(:class => 'waves-effect waves-light btn-large welcome-btn') do %>
+            <i class="fa fa-twitter"></i><a href="/auth/twitter"> &nbsp; Login with Twitter</a>
           <% end %>
-
-          </div>
+        <% end %>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="parallax-container parallax-container-1">
   <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
 </div>
+
 <div class="section info">
   <div class="row container">
 
         <div class = row>
           <div class="col s12 m4 center">
             <h4 class="main_title">Purpose</h4>
-                <p class="about">#Robot will give the user the best hast tag choices based on a chosen category. Users can then tweet right from the application with the suggested hash tags.
+                <p class="about">
+                  #Robot will give the user the best hast tag choices based on a chosen category.
+                  Users can then tweet right from the application with the suggested hash tags.
                 </p>
           </div>
           <div class="col s12 m4 center">
             <h4 class="main_title">Design</h4>
-                <p class="about"> #Robot is designed to ingest large numbers of tweets from Twitter's API.
-                    It then passes them to the Monkey Learn API to get the relevant category for a particular tweet.
-                    It then finds the most used hash tags for a particular category and returns those to a user upon request.
+                <p class="about">
+                  #Robot is designed to ingest large numbers of tweets from Twitter's API.
+                  It then passes them to the Monkey Learn API to get the relevant category for a particular tweet.
+                  It then finds the most used hash tags for a particular category
+                  and returns those to a user upon request.
                 </p>
           </div>
           <div class="col s12 m4 center">
-            <h4 class="main_title">Creators</h4>
-                <p class="about"> #Robot was created by Ryan Smith, Jeff Demers, and Chris Wu while taking General Assembly's 12-week Web Development Immersive program.
-                </p>
+            <h4 class="main_title">Architecture</h4>
+                <ul class="about">
+                  <li>Hosted on <a href="https://www.heroku.com/">Heroku</a></li>
+                  <li>Built on <a href="http://rubyonrails.org/">rails</a> and a bit of <a href="https://jquery.com/">jQuery</a></li>
+                  <li><a href="http://materializecss.com/">Materialize</a> for CSS</li>
+                  <li>Icons from <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></li>
+                  <li>Fonts from <a href="https://www.google.com/fonts">Google fonts</a></li>
+                  <li>Check us out on <a href="https://github.com/rysmith/hashrobot">GitHub</a></li>
+                </ul>
           </div>
         </div>
   </div>
@@ -56,6 +65,38 @@
   <div class="parallax"><%=	image_tag 'robot_new_black.png' %></div>
 </div>
 
+<div class="parallax-container">
+  <div class="section pictures">
+    <div class="row container">
+      <div class="row">
+        <div class="col s12 center">
+          <h2 class="main_title">Creators</h2>
+          <p>
+            Ryan, Jeff, and Chris created #Robot while taking GA's 12-week Web Development Immersive program.
+          </p>
+        </div>
+      </div>
+      <div class = row>
+        <div class="col s12 m4 center">
+          <div id="robot-jeff"></div>
+          <h4>Jeff Demers</h4>
+        </div>
+        <div class="col s12 m4 center">
+          <div id="robot-ryan"></div>
+          <h4>Ryan Smith</h4>
+        </div>
+        <div class="col s12 m4 center">
+          <div id="robot-chris"></div>
+          <h4>Chris Wu</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
+</div>
 
 
 

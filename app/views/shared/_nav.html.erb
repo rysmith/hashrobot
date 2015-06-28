@@ -2,18 +2,16 @@
   <div class="nav-wrapper">
     <div class="container">
       <a href="/" class="brand-logo"><%=	image_tag 'hashrobot_xs.png' %></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <div id="nav-mobile" class="right hide-on-med-and-down">
         <% if current_user %>
-          <ul>
-            <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
-            <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-          </ul>
+          <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'nav-logout-link' %>
+          <%= image_tag current_user.image_url, alt: current_user.name, 'class' => 'user-image' %>
         <% else %>
           <%= button_tag(:class => 'waves-effect waves-light btn welcome-btn') do %>
             <a href="/auth/twitter">Login with Twitter</a>
           <% end %>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </nav>

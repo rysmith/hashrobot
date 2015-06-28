@@ -58,11 +58,25 @@ footer.page-footer {
 
 }
 
+#nav-mobile {
+  padding-top: 7px;
+}
+
 nav {
-  height: 70px;
+  height: 80px;
   background-color: #00B4BF;
+  padding-top: 7px;
+  padding-bottom: 3px;
 }
 
 footer.page-footer {
   background-color: #00B4BF;
+}
+
+.nav-logout-link {
+  margin-right: 10px;
+}
+
+.user-image {
+  border-radius: 10px;
 }
