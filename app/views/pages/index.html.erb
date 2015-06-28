@@ -1,14 +1,10 @@
-<div class="parallax-container parallax-container-0">
-
-  <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
-</div>
 
 <div class="section info jumbotron">
   <div class="row container">
     <div class = row>
       <div class="col s12 m12 center">
         <h1 class="jumbotron-header">#Robot</h1>
-        <h5>Choosing the right hashtags can be hard.  Let #Robot choose them for you.</h5>
+        <h5>Great content deserves to be #noticed.</h5>
         <% if current_user %>
           <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
         <% else %>
@@ -27,37 +23,38 @@
 </div>
 
 <div class="section info">
-  <div class="row container">
-
-        <div class = row>
-          <div class="col s12 m4 center">
-            <h4 class="main_title">Purpose</h4>
-                <p class="about">
-                  #Robot will give the user the best hast tag choices based on a chosen category.
-                  Users can then tweet right from the application with the suggested hash tags.
-                </p>
-          </div>
-          <div class="col s12 m4 center">
-            <h4 class="main_title">Design</h4>
-                <p class="about">
-                  #Robot is designed to ingest large numbers of tweets from Twitter's API.
-                  It then passes them to the Monkey Learn API to get the relevant category for a particular tweet.
-                  It then finds the most used hash tags for a particular category
-                  and returns those to a user upon request.
-                </p>
-          </div>
-          <div class="col s12 m4 center">
-            <h4 class="main_title">Architecture</h4>
-                <ul class="about">
-                  <li>Hosted on <a href="https://www.heroku.com/">Heroku</a></li>
-                  <li>Built on <a href="http://rubyonrails.org/">rails</a> and a bit of <a href="https://jquery.com/">jQuery</a></li>
-                  <li><a href="http://materializecss.com/">Materialize</a> for CSS</li>
-                  <li>Icons from <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></li>
-                  <li>Fonts from <a href="https://www.google.com/fonts">Google fonts</a></li>
-                  <li>Check us out on <a href="https://github.com/rysmith/hashrobot">GitHub</a></li>
-                </ul>
-          </div>
+  <h4 class="main_title center">Make a big impact with your social media content.</h4>
+     <div class ="row center">
+       <div class="col s12 m4 l4">
+         <i class="large material-icons">trending_up</i>
+         <h5 class="main_title">Goal</h5>
+             <p class="about">#Robot is your personal marketing consultant.
+               <br><br>#Robot will give the most visible and used hashtags in each cateogry. Adding these hashtags to your tweets will give social media users an edge in getting views and gaining followers.
+               <br><br>#Robot makes it easy for you to tweet right from our hash dash!
+             </p>
+       </div>
+       <div class="col s12 m4 l4">
+         <i class="large material-icons">track_changes</i>
+         <h5 class="main_title">Design</h5>
+             <p class="about"> #Robot is designed to process large numbers of current and poular tweets from Twitter's API.
+                 #Robot then passes them to the Monkey Learn API to gain data and relevant categories for a each tweet.
+                 #Robot reivews the results applies its proprietary algorithm then finds the most valuable hash tags for a each category at a given moment.
+               <br> <br> These hashtags can then be used to raise your social media profile!
+             </p>
+       </div>
+       <div class="col s12 m4 l4">
+        <i class="large material-icons">web</i>
+          <h5 class="main_title">Architecture</h5>
+              <ul class="about">
+                <li>Hosted on <a href="https://www.heroku.com/">Heroku</a></li>
+                <li>Built on <a href="http://rubyonrails.org/">rails</a> and a bit of <a href="https://jquery.com/">jQuery</a></li>
+                <li><a href="http://materializecss.com/">Materialize</a> for CSS</li>
+                <li>Icons from <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></li>
+                <li>Fonts from <a href="https://www.google.com/fonts">Google fonts</a></li>
+                <li>Check us out on <a href="https://github.com/rysmith/hashrobot">GitHub</a></li>
+              </ul>
         </div>
+      </div>
   </div>
 </div>
 
@@ -69,24 +66,24 @@
   <div class="section pictures">
     <div class="row container">
       <div class="row">
-        <div class="col s12 center">
+        <div class="col s12 center about">
           <h2 class="main_title">Creators</h2>
-          <p>
-            Ryan, Jeff, and Chris created #Robot while taking GA's 12-week Web Development Immersive program.
-          </p>
+          <h5>
+            Conceived and created during General Assembly's 12-week <a href="https://generalassemb.ly/education/web-development-immersive/los-angeles">WDI</a> program.
+          </h5>
         </div>
       </div>
       <div class = row>
         <div class="col s12 m4 center">
-          <div id="robot-jeff"></div>
+          <a href="https://www.linkedin.com/in/jeffreydemers"><div id="robot-jeff"></div></a>
           <h4>Jeff Demers</h4>
         </div>
         <div class="col s12 m4 center">
-          <div id="robot-ryan"></div>
+          <a href="http://ryansmith.io/"><div id="robot-ryan"></div></a>
           <h4>Ryan Smith</h4>
         </div>
         <div class="col s12 m4 center">
-          <div id="robot-chris"></div>
+          <a href="https://www.linkedin.com/in/christophertwu"><div id="robot-chris"></div></a>
           <h4>Chris Wu</h4>
         </div>
       </div>
@@ -94,7 +91,7 @@
   </div>
 </div>
 
-<div class="parallax-container">
+<div class="parallax-container  parallax-container-1">
   <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
 </div>
 
