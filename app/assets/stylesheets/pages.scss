@@ -23,12 +23,16 @@
   border-radius: 10px;
 }
 
-.welcome-btn {
-  margin-left: 120px;
+.welcome-btn > a {
+  color: white;
 }
 
 .parallax-container {
   height: 300px;
+}
+
+.parallax-container1 {
+  height: 100px;
 }
 
 .about{
@@ -42,4 +46,16 @@
 
 .info {
   background-color: #FC8E2D;
+}
+
+.jumbotron {
+  background-color: white;
+}
+
+.jumbotron-header, h4 {
+  font-family: 'Play', sans-serif;
+}
+
+h5, p, a  {
+  font-family: 'Exo', sans-serif;
 }

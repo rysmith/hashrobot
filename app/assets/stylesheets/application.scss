@@ -17,9 +17,10 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: #FC8E2D !default;
 $secondary-color: #8E2A92;
 @import 'materialize';
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Exo|Play|Orbitron|Varela|Jura);
 
 body {
   display: flex;
@@ -58,6 +59,7 @@ footer.page-footer {
 }
 
 nav {
+  height: 70px;
   background-color: #00B4BF;
 }
 

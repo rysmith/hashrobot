@@ -1,15 +1,30 @@
+<div class="parallax-container1">
+  <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
+</div>
+
 <div class="parallax-container">
 
-  <div class="main-home">
-      <h3>#Robot</h3>
-      <p>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</p>
-      <% if current_user %>
-        <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn welcome-btn' %>
-      <% else %>
-        <%= link_to 'Login with Twitter', '/auth/twitter', 'class' => 'waves-effect waves-light btn welcome-btn' %>
-      <% end %>
-  </div>
 
+  <div class="section info jumbotron">
+    <div class="row container">
+
+      <div class = row>
+        <div class="col s12 m12 center">
+          <h1 class="jumbotron-header">#Robot</h1>
+          <h5>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</h5>
+          <% if current_user %>
+            <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
+          <% else %>
+            <%= button_tag(:class => 'waves-effect waves-light btn-large welcome-btn') do %>
+              <a href="/auth/twitter"><i class="fa fa-twitter-square"></i> &nbsp; Login with Twitter</a>
+            <% end %>
+          <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
 </div>
 <div class="section info">
@@ -36,9 +51,10 @@
         </div>
   </div>
 </div>
-      <div class="parallax-container">
-        <div class="parallax"><%=	image_tag 'robot_new_black.png' %></div>
-      </div>
+
+<div class="parallax-container">
+  <div class="parallax"><%=	image_tag 'robot_new_black.png' %></div>
+</div>
 
 
 
