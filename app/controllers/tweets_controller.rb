@@ -5,16 +5,7 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all.order(created: :desc)
   end
 
-  def show
-
-  end
-
-  def new
-
-  end
-
   def get_latest
-
 
     tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '34.101509,-118.32691,5mi').take(25)
 
@@ -36,10 +27,10 @@ class TweetsController < ApplicationController
 
     client.update(tweet_params[:tweet_body])
 
-    redirect_to new_tweet_path
+    redirect_to hashboard_path
   end
 
-  private
+private
 
   def tweet_params
 

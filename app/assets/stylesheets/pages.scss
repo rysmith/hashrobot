@@ -1,6 +1,4 @@
-h3 {
-  text-align: center;
-}
+
 
 #category-dropdown {
   display: block;
@@ -15,11 +13,18 @@ h3 {
 }
 
 .main-home {
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
-  color: white;
-  font-size: 100px;
+  color: black;
   margin-top: 75px;
+  background-color: white;
+  opacity: 0.95;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.welcome-btn {
+  margin-left: 120px;
 }
 
 .parallax-container {

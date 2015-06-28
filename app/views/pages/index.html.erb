@@ -1,13 +1,13 @@
 <div class="parallax-container">
 
-  <div class="main-home" center>
-    #Robot
-
-        <% if current_user %>
-        <%= link_to 'Log Out', logout_path, method: :delete %>
-        <% else %>
-        <%=	link_to 'Login with Twitter', '/auth/twitter' %>
-        <% end %>
+  <div class="main-home">
+      <h3>#Robot</h3>
+      <p>Choosing the right hashtags can be hard.  Let #Robot do the heavy lifting for you.</p>
+      <% if current_user %>
+        <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn welcome-btn' %>
+      <% else %>
+        <%= link_to 'Login with Twitter', '/auth/twitter', 'class' => 'waves-effect waves-light btn welcome-btn' %>
+      <% end %>
   </div>
 
   <div class="parallax"><%=	image_tag 'colorful-robots.jpg' %></div>
