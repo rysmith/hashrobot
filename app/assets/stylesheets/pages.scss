@@ -2,6 +2,16 @@
   background: #00B4BF;
 }
 
+.creators {
+  background: black;
+  border: 5px solid #00B4BF;
+  width: 200px; // These are your circle dimensions
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center; // Center image in the circle
+  padding-top: 20px;
+}
+
 .material-icons {
   color: white;
 }
