@@ -119,8 +119,12 @@ h5, p, a  {
 
 .tag-results .card {
   margin: 5px;
+  display: inline-block;
 }
 
 .tag-results {
   display: inline-block;
+  overflow: auto;
+  width: 100%;
+  margin-top: 10px;
 }
