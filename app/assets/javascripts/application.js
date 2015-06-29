@@ -31,10 +31,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#animals</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#animals</div>")
                 }
             });
         });
@@ -45,10 +45,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#beauty</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#beauty</div>")
                 }
             });
         });
@@ -59,10 +59,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#business</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#business</div>")
                 }
             });
         });
@@ -73,10 +73,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#computers</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#computers</div>")
                 }
             });
         });
@@ -87,10 +87,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#electronics</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#electronics</div>")
                 }
             });
         });
@@ -101,10 +101,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#education</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#education</div>")
                 }
             });
         });
@@ -115,10 +115,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#entertainment</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#entertainment</div>")
                 }
             });
         });
@@ -129,10 +129,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#environment</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#environment</div>")
                 }
             });
         });
@@ -143,10 +143,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#food</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#food</div>")
                 }
             });
         });
@@ -157,10 +157,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#gardening</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#gardening</div>")
                 }
             });
         });
@@ -171,10 +171,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#health</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#health</div>")
                 }
             });
         });
@@ -185,10 +185,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#home</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#home</div>")
                 }
             });
         });
@@ -199,10 +199,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#humanities</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#humanities</div>")
                 }
             });
 
@@ -214,10 +214,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#science</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#science</div>")
                 }
             });
         });
@@ -228,10 +228,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#society</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#society</div>")
                 }
             });
         });
@@ -242,10 +242,10 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card'>#travel</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#travel</div>")
                 }
             });
         });
