@@ -27,6 +27,7 @@ $(document).ready(function(){
 
         $("#Animals").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/1", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -40,6 +41,7 @@ $(document).ready(function(){
 
         $("#Beauty").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/2", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -53,6 +55,7 @@ $(document).ready(function(){
 
         $("#Business").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/3", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -66,6 +69,7 @@ $(document).ready(function(){
 
         $("#Computers").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/4", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -79,6 +83,7 @@ $(document).ready(function(){
 
         $("#Consumer").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/5", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -92,6 +97,7 @@ $(document).ready(function(){
 
         $("#Education").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/6", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -105,6 +111,7 @@ $(document).ready(function(){
 
         $("#Entertainment").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/7", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -118,6 +125,7 @@ $(document).ready(function(){
 
         $("#Environment").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/8", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -131,6 +139,7 @@ $(document).ready(function(){
 
         $("#Food").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/9", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -144,6 +153,7 @@ $(document).ready(function(){
 
         $("#Gardening").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/10", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -157,6 +167,7 @@ $(document).ready(function(){
 
         $("#Health").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/11", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -170,6 +181,7 @@ $(document).ready(function(){
 
         $("#Home").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/12", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -183,6 +195,7 @@ $(document).ready(function(){
 
         $("#Humanities").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/13", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -197,6 +210,7 @@ $(document).ready(function(){
 
         $("#Science").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/14", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -210,6 +224,7 @@ $(document).ready(function(){
 
         $("#Society").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/15", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
@@ -223,6 +238,7 @@ $(document).ready(function(){
 
         $("#Travel").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/16", function( data ) {
+                $('.tag-results').html("");
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
