@@ -29,6 +29,10 @@ module Api
 
 private
 
+    # expects a category name from the Categories table
+    # returns a single key/value pair
+    # key is the category_id
+    # value is an array with the rank and hashtag
     def get_ranking(category)
 
       category_tags = get_categories(Label, category)
@@ -36,16 +40,21 @@ private
       determine_winners(rank, category)
     end
 
+    # expects a category name and the label table
+    #returns a two item array with probability and hashtag - e.g. [1.297, "#hashtag"]
     def get_categories(label_table, category)
 
+      #only get hashtags with a monkeylearn probability greater than 20%
       cat = label_table.connection.execute("SELECT * FROM Labels WHERE label='#{category}' and probability>=0.200;")
       cat_tags = {}
 
+      #convert the psql string 'array' to a true array
       cat.each do |t|
 
         cat_tags.merge!(t['probability'].to_f + 1 => t['hashtag'].gsub("{","").gsub("}","").split(","))
       end
 
+      #make all the hashtags lowercase
       cat_tags.each do |key, value|
 
         value.each do |v|
@@ -56,6 +65,7 @@ private
 
       cat_tags_sep = []
 
+      #associate each hashtag with a probability as a two item array
       cat_tags.each do |key, value|
 
         value.each do |v|
@@ -66,11 +76,13 @@ private
 
       cat_tags_sep_final = []
 
+      #convert the probability back to float
       cat_tags_sep.each do |e|
 
         cat_tags_sep_final << [e[0].to_f, e[1]]
       end
 
+      #return a two item array with probability and hashtag - e.g. [1.297, "#hashtag"]
       cat_tags_sep_final
     end
 

@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+//build the dropdown category list from the categories API endpoint
 $(document).ready(function(){
     $.getJSON( "http://www.hashrobot.com/api/categories", function( data ) {
         for (i = 0; i < data.length; i++) {
@@ -24,6 +25,9 @@ $(document).ready(function(){
             $('#dropdown1').append("<li><a href='#' id='" + shortCategoryName +"'>" + categoryName + "</a></li>");
 
         }
+
+        //each click function below displays the hashtags for it's appropriate category
+        //if there are no hashtags found at the API endpoint, it returns a default hashtag
 
         $("#Animals").click(function () {
             $.getJSON( "http://www.hashrobot.com/api/categories/1", function( data ) {
