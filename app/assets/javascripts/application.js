@@ -30,7 +30,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#animals</div>")
@@ -43,7 +43,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#beauty</div>")
@@ -56,7 +56,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#business</div>")
@@ -69,7 +69,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#computers</div>")
@@ -82,7 +82,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#electronics</div>")
@@ -95,7 +95,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#education</div>")
@@ -108,7 +108,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#entertainment</div>")
@@ -121,7 +121,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#environment</div>")
@@ -134,7 +134,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#food</div>")
@@ -147,7 +147,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#gardening</div>")
@@ -160,7 +160,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#health</div>")
@@ -173,7 +173,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#home</div>")
@@ -186,7 +186,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#humanities</div>")
@@ -200,7 +200,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#science</div>")
@@ -213,7 +213,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#society</div>")
@@ -226,7 +226,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
+                        $('.tag-results').append("<span class='card'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card'>#travel</div>")
