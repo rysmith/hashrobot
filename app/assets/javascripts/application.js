@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).ready(function(){
-    $.getJSON( "http://localhost:3000/api/categories", function( data ) {
+    $.getJSON( "http://www.hashrobot.com/api/categories", function( data ) {
         for (i = 0; i < data.length; i++) {
             var categoryName = data[i].name;
             var shortCategoryName = categoryName.split(" ")[0];
@@ -26,7 +26,7 @@ $(document).ready(function(){
         }
 
         $("#Animals").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/1", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/1", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -35,7 +35,7 @@ $(document).ready(function(){
         });
 
         $("#Beauty").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/2", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/2", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -44,7 +44,7 @@ $(document).ready(function(){
         });
 
         $("#Business").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/3", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/3", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -53,7 +53,7 @@ $(document).ready(function(){
         });
 
         $("#Computers").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/4", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/4", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -62,7 +62,7 @@ $(document).ready(function(){
         });
 
         $("#Consumer").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/5", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/5", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -71,7 +71,7 @@ $(document).ready(function(){
         });
 
         $("#Education").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/6", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/6", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -80,7 +80,7 @@ $(document).ready(function(){
         });
 
         $("#Entertainment").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/7", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/7", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -89,7 +89,7 @@ $(document).ready(function(){
         });
 
         $("#Environment").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/8", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/8", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -98,7 +98,7 @@ $(document).ready(function(){
         });
 
         $("#Food").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/9", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/9", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -107,7 +107,7 @@ $(document).ready(function(){
         });
 
         $("#Gardening").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/10", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/10", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -116,7 +116,7 @@ $(document).ready(function(){
         });
 
         $("#Health").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/11", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/11", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -125,7 +125,7 @@ $(document).ready(function(){
         });
 
         $("#Home").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/12", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/12", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -134,7 +134,7 @@ $(document).ready(function(){
         });
 
         $("#Humanities").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/13", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/13", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -144,7 +144,7 @@ $(document).ready(function(){
         });
 
         $("#Science").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/14", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/14", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -153,7 +153,7 @@ $(document).ready(function(){
         });
 
         $("#Society").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/15", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/15", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
@@ -162,7 +162,7 @@ $(document).ready(function(){
         });
 
         $("#Travel").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/16", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/16", function( data ) {
                 for (i = 0; i < data.length; i++) {
                     var hashtag = data[i].name;
                     $('.tag-results').append("<div class='card'>" + hashtag + "</div>")
