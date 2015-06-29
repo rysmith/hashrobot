@@ -41,7 +41,7 @@ private
     end
 
     # expects a category name and the label table
-    #returns a two item array with probability and hashtag - e.g. [1.297, "#hashtag"]
+    # returns an array of two item arrays with probability and hashtag - e.g. [[1.297, "#hashtag"], ...]
     def get_categories(label_table, category)
 
       #only get hashtags with a monkeylearn probability greater than 20%
@@ -86,6 +86,10 @@ private
       cat_tags_sep_final
     end
 
+    # rank the tags by how often they appear and the monkeylearn probability
+    # expects an array of two item arrays
+    # returns an array of three item arrays each containing the probability, hashtag, and rank
+    # e.g. [[1.297, "#hashtag", 3.632], ...]
     def get_tag_rank(get_categories)
 
        ranked_hashtags = []
@@ -110,6 +114,10 @@ private
        ranked_hashtags
      end
 
+    # convert the category name to a cateogry_id
+    # allow hashtags through that have a rank of 1.35 or higher
+    # expects an array of three item arrays each containing the probability, hashtag, and rank
+    # returns an a hash with the category_id (key), and a two item array with the hashtag and rank (value)
     def determine_winners(get_tag_rank, category)
 
       case category
@@ -160,6 +168,8 @@ private
        winners = {category_id => cat_winners }
      end
 
+    # expects a hash with the category_id (key), and a two item array with the hashtag and rank (value)
+    # save hashtags and their rank to the Categories table
     def save_tags(winners)
 
       winners.each do |key, value|

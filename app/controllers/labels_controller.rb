@@ -5,6 +5,7 @@ class LabelsController < ApplicationController
     @labels = Label.all
   end
 
+  # send tweet strings to monkeylearn and save the results to the db
   def create
 
     tweet_content = compile_tweet_content(Tweet)
