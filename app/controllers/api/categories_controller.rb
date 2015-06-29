@@ -3,12 +3,14 @@ module Api
 
 		protect_from_forgery with: :null_session
 
+    # expose the list of categories at /api/categories
 		def index
 
 			@categories = Category.all
 			render json: @categories 
     end
 
+    # expose the hastags for each category /api/categories/<category_id>
 		def show
 
 			category = Category.find(params[:id])
@@ -16,6 +18,7 @@ module Api
 			render json: tags
 		end
 
+    # for each Category, get the hashtag ranking and save it to the db
 		def rank_tags
 
       category = Category.all
