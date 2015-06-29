@@ -21,7 +21,7 @@ $(document).ready(function(){
         for (i = 0; i < data.length; i++) {
             var categoryName = data[i].name;
             var shortCategoryName = categoryName.split(" ")[0];
-            $('#dropdown1').append("<li><a href='#!' id='" + shortCategoryName +"'>" + categoryName + "</a></li>");
+            $('#dropdown1').append("<li><a href='#' id='" + shortCategoryName +"'>" + categoryName + "</a></li>");
 
         }
 
