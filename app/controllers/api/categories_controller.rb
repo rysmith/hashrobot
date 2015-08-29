@@ -7,7 +7,7 @@ module Api
 		def index
 
 			@categories = Category.all
-			render json: @categories 
+			render json: @categories
     end
 
     # expose the hastags for each category /api/categories/<category_id>
@@ -54,7 +54,7 @@ private
       #convert the psql string 'array' to a true array
       cat.each do |t|
 
-        cat_tags.merge!(t['probability'].to_f + 1 => t['hashtag'].gsub("{","").gsub("}","").split(","))
+        cat_tags.merge!(t['probability'].to_f => t['hashtag'].gsub("{","").gsub("}","").split(","))
       end
 
       #make all the hashtags lowercase
@@ -162,7 +162,7 @@ private
 
        get_tag_rank.each do |t|
 
-         if t[2] >=1.35
+         if t[2] >=0.35
 
            cat_winners << [t[1], t[2]]
          end
