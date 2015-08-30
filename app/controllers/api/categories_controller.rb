@@ -90,9 +90,9 @@ private
     end
 
     # rank the tags by how often they appear and the monkeylearn probability
-    # expects an array of two item arrays
+    # expects an array of two item arrays e.g. [[0.297, "#hashtag"], ...]
     # returns an array of three item arrays each containing the probability, hashtag, and rank
-    # e.g. [[1.297, "#hashtag", 3.632], ...]
+    # e.g. [[0.297, "#hashtag", 0.594], ...]
     def get_tag_rank(get_categories)
 
        ranked_hashtags = []
@@ -111,14 +111,19 @@ private
          end
 
          tag_array << tag_count * tag_array[0]
+				 tag_array << tag_count
          ranked_hashtags << tag_array
        end
+
+			 ranked_hashtags.each do |ranked_tag_array|
+				 puts "#{ranked_tag_array[1]} : #{ranked_tag_array[2]} : #{ranked_tag_array[3]}"
+			 end
 
        ranked_hashtags
      end
 
     # convert the category name to a cateogry_id
-    # allow hashtags through that have a rank of 1.35 or higher
+    # allow hashtags through that have a rank of 0.35 or higher
     # expects an array of three item arrays each containing the probability, hashtag, and rank
     # returns an a hash with the category_id (key), and a two item array with the hashtag and rank (value)
     def determine_winners(get_tag_rank, category)
