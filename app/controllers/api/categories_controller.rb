@@ -119,6 +119,7 @@ private
     end
 
 		# remove tags that appear more than once
+		# if no dups are found just return ranked_hashtags
 		def eliminate_tag_dups(ranked_hashtags)
 			dups_array = []
 			ranked_hashtags.each do |ranked_tag_array|
