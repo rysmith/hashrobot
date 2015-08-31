@@ -7,6 +7,7 @@
         <h5>Great content deserves to be #noticed.</h5>
         <% if current_user %>
           <%= link_to 'Log Out', logout_path, method: :delete, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
+          <%= link_to '#board', hashboard_path, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
         <% else %>
           <%= button_tag(:class => 'waves-effect waves-light btn-large welcome-btn') do %>
             <i class="fa fa-twitter"></i><a href="/auth/twitter"> &nbsp; Login with Twitter</a>
@@ -100,7 +101,3 @@
 <div class="parallax-container  parallax-container-1">
   <div class="parallax"><%=	image_tag 'colorful-robots-sm.jpg' %></div>
 </div>
-
-
-
-
