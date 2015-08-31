@@ -18,7 +18,7 @@
 
 //build the dropdown category list from the categories API endpoint
 $(document).ready(function(){
-    $.getJSON( "http://localhost:3000/api/categories", function( data ) {
+    $.getJSON( "http://www.hashrobot.com/api/categories", function( data ) {
         for (var i = 0; i < data.length; i++) {
             var categoryName = data[i].name;
             var shortCategoryName = categoryName.split(" ")[0];
@@ -30,7 +30,7 @@ $(document).ready(function(){
         //if there are no hashtags found at the API endpoint, it returns a default hashtag
 
         $("#Animals").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/1", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/1", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -44,7 +44,7 @@ $(document).ready(function(){
         });
 
         $("#Beauty").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/2", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/2", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -58,7 +58,7 @@ $(document).ready(function(){
         });
 
         $("#Business").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/3", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/3", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -72,7 +72,7 @@ $(document).ready(function(){
         });
 
         $("#Computers").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/4", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/4", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -86,7 +86,7 @@ $(document).ready(function(){
         });
 
         $("#Consumer").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/5", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/5", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -100,7 +100,7 @@ $(document).ready(function(){
         });
 
         $("#Education").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/6", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/6", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -114,7 +114,7 @@ $(document).ready(function(){
         });
 
         $("#Entertainment").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/7", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/7", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -128,7 +128,7 @@ $(document).ready(function(){
         });
 
         $("#Environment").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/8", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/8", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -142,7 +142,7 @@ $(document).ready(function(){
         });
 
         $("#Food").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/9", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/9", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -156,7 +156,7 @@ $(document).ready(function(){
         });
 
         $("#Gardening").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/10", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/10", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -170,7 +170,7 @@ $(document).ready(function(){
         });
 
         $("#Health").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/11", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/11", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -184,7 +184,7 @@ $(document).ready(function(){
         });
 
         $("#Home").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/12", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/12", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -198,7 +198,7 @@ $(document).ready(function(){
         });
 
         $("#Humanities").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/13", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/13", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -213,7 +213,7 @@ $(document).ready(function(){
         });
 
         $("#Science").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/14", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/14", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -227,7 +227,7 @@ $(document).ready(function(){
         });
 
         $("#Society").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/15", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/15", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -241,7 +241,7 @@ $(document).ready(function(){
         });
 
         $("#Travel").click(function () {
-            $.getJSON( "http://localhost:3000/api/categories/16", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/16", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
