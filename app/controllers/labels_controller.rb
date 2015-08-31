@@ -85,7 +85,7 @@ private
   def analyze_tweets(tweet_list)
 
     # get the monkeylearn API token from Figaro
-    monkey_token = Figaro.env.monkey_learn_token
+    monkey_token = Figaro.env.monkey_learn_token || MONKEY_LEARN_TOKEN
 
     # cl_5icAVzKR is the generic topic classifier endpoint
     uri = URI.parse("https://api.monkeylearn.com/v2/classifiers/cl_5icAVzKR/classify/")
