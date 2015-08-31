@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   namespace :api do
 
-    resources :categories, except: [:new, :edit] 
+    resources :categories, except: [:new, :edit]
   end
 
   #send users to the welcome page upon arrival
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get 'labels/new' => 'labels#new', as: :new_label
 
   post 'labels/create' => 'labels#create'
-  
+
   post 'api/categories/rank_tags' => 'api/categories#rank_tags'
 
   #get all the current tweet in our db
