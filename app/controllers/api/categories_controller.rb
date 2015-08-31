@@ -115,12 +115,31 @@ private
          ranked_hashtags << tag_array
        end
 
-			 ranked_hashtags.each do |ranked_tag_array|
-				 puts "#{ranked_tag_array[1]} : #{ranked_tag_array[2]} : #{ranked_tag_array[3]}"
-			 end
+			 eliminate_tag_dups(ranked_hashtags)
+    end
 
-       ranked_hashtags
-     end
+		# remove tags that appear more than once
+		def eliminate_tag_dups(ranked_hashtags)
+			dups_array = []
+			ranked_hashtags.each do |ranked_tag_array|
+				if ranked_tag_array[3] > 1
+					dups_array << ranked_tag_array
+				end
+			end
+			if dups_array.length > 1
+				tag_rank = []
+				dups_array.each do |arr|
+					tag_rank << arr[2]
+				end
+				max_index_val = tag_rank.index(tag_rank.max)
+				tag_to_use = dups_array[max_index_val]
+				no_dups = ranked_hashtags - dups_array
+				ranked_tags_no_dups = no_dups << tag_to_use
+				return ranked_tags_no_dups
+			else
+				return ranked_hashtags
+			end
+		end
 
     # convert the category name to a cateogry_id
     # allow hashtags through that have a rank of 0.35 or higher
