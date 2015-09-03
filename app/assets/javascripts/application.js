@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize-sprockets
-//= require turbolinks
 //= require_tree .
 
 //build the dropdown category list from the categories API endpoint
@@ -253,7 +252,6 @@ $(document).ready(function(){
                 }
             });
         });
-
     });
 
     $('.parallax').parallax();
