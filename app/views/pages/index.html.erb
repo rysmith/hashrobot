@@ -10,7 +10,7 @@
           <%= link_to '#board', hashboard_path, 'class' => 'waves-effect waves-light btn-large welcome-btn' %>
         <% else %>
           <%= button_tag(:class => 'waves-effect waves-light btn-large welcome-btn') do %>
-            <i class="fa fa-twitter"></i><a href="/auth/twitter"> &nbsp; Login with Twitter</a>
+            <a href="/auth/twitter">Login with Twitter</a>
           <% end %>
         <% end %>
         </div>
@@ -38,7 +38,7 @@
          <i class="large material-icons">track_changes</i>
          <h5 class="main_title">Design</h5>
              <p class="about"> #Robot is designed to process large numbers of current and popular tweets from Twitter's API.
-                 #Robot then passes them to the Monkey Learn API to gain data and relevant categories for a each tweet.
+                 #Robot then passes them to the MonkeyLearn API to gain data and relevant categories for a each tweet.
                  #Robot reivews the results applies its proprietary algorithm then finds the most valuable hash tags for a each category at a given moment.
                <br> <br> These hashtags can then be used to raise your social media profile!
              </p>
@@ -47,6 +47,8 @@
         <i class="large material-icons">web</i>
           <h5 class="main_title">Architecture</h5>
               <ul class="about">
+                <li>Language processing via <a href="http://monkeylearn.com/">MonkeyLearn</a></li>
+                <li>Data from <a href="https://twitter.com/">Twitter</a></li>
                 <li>Hosted on <a href="https://www.heroku.com/">Heroku</a></li>
                 <li>Built on <a href="http://rubyonrails.org/">rails</a> and a bit of <a href="https://jquery.com/">jQuery</a></li>
                 <li><a href="http://materializecss.com/">Materialize</a> for CSS</li>
