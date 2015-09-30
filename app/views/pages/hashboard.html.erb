@@ -12,15 +12,17 @@
 
   <div class="tag-results"></div>
 
-  <div class="tweet-box">
-    <%= form_tag('/tweets/create')do %>
-      <%= text_field_tag :tweet_body, nil, :placeholder => "Enter tweet here" %>
-      <%= button_tag(:class => 'btn') do %>
-       <i class="fa fa-twitter tooltipped" data-position="top" data-delay="5" data-tooltip="Send a tweet!"></i> &nbsp; Tweet!
+  <% if current_user %>
+    <div class="tweet-box">
+      <%= form_tag('/tweets/create')do %>
+        <%= text_field_tag :tweet_body, nil, :placeholder => "Enter tweet here" %>
+        <%= button_tag(:class => 'btn') do %>
+         <i class="fa fa-twitter tooltipped" data-position="top" data-delay="5" data-tooltip="Send a tweet!"></i> &nbsp; Tweet!
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <br>
+    </div>
+    <br>
+  <% end %>
 
 
 </div>
