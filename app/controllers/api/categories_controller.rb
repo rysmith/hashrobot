@@ -14,7 +14,7 @@ module Api
 		def show
 
 			category = Category.find(params[:id])
-			tags = category.tags
+			tags = category.tags.order(rank: :desc).limit(15)
 			render json: tags
 		end
 
