@@ -33,7 +33,7 @@ $(document).ready(function(){
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
                         var hashtag = data[i].name;
-                        $('.tag-results').append("<span class='card animated bounceInDown'" + hashtag + "</span>")
+                        $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
                     $('.tag-results').append("<div class='card animated bounceInDown'>#animals</div>")
