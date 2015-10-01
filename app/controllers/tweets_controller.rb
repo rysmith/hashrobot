@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
 
   def get_latest
 
-    tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '34.101509,-118.32691,5mi').take(500)
+    tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '37.764795,-122.457780,5mi').take(500)
 
     tweets.each do |t|
 
