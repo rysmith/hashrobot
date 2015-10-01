@@ -28,7 +28,7 @@ $(document).ready(function(){
         //if there are no hashtags found at the API endpoint, it returns a default hashtag
 
         $("#Animals").click(function () {
-            $.getJSON( "http://www.hashrobot.com/api/categories/2", function( data ) {
+            $.getJSON( "http://www.hashrobot.com/api/categories/1", function( data ) {
                 $('.tag-results').html("");
                 if (data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
@@ -36,10 +36,10 @@ $(document).ready(function(){
                         $('.tag-results').append("<span class='card animated bounceInDown'>" + hashtag + "</span>")
                     }
                 } else {
-                    $('.tag-results').append("<div class='card animated bounceInDown'>#beauty</div>")
+                    $('.tag-results').append("<div class='card animated bounceInDown'>#animals</div>")
                 }
             });
-            Materialize.toast('Category: Beauty &amp; Style', 6000)
+            Materialize.toast('Category: Animals', 6000)
         });
 
 
