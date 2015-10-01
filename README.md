@@ -25,3 +25,20 @@ These hashtags can then be used to raise your social media profile!
 * [Materialise CSS](http://materializecss.com/ "Materialize") for CSS
 * Icons from [Font Awesome](https://fortawesome.github.io/Font-Awesome/icons/ "Font Awesome")
 * Fonts from [Google Fonts](https://www.google.com/fonts "Google fonts")
+
+## License
+
+Copyright (C) 2105 Ryan Smith, Jeff Demers, Chris Wu
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
