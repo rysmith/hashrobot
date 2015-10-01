@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
 
   def get_latest
 
-    tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: '37.764795,-122.457780,5mi').take(500)
+    tweets = client.search("*.* -rt", lang: "en", result_type: "mixed", hashtags: true, geocode: tweet_loc_params[:tweet_location] + ',5mi').take(500)
 
     tweets.each do |t|
 
@@ -35,6 +35,11 @@ private
   def tweet_params
 
     params.permit(:tweet_body)
+  end
+
+  def tweet_loc_params
+
+    params.permit(:tweet_location)
   end
 
   def client
