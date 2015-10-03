@@ -6,7 +6,7 @@
   <div class = row>
     <div class="col s12 m4 center">
       <%= form_tag('/tweets/get_latest')do %>
-      <%= text_field_tag :tweet_location, nil, :placeholder => "e.g. 34.101509,-118.32691" %>
+        <%= text_field_tag :tweet_location, nil, :placeholder => "e.g. 34.101509,-118.32691" %>
         <%= button_tag(:class => 'btn') do %>
             <i class="fa fa-twitter"></i> &nbsp; Get Tweets
         <% end %>
