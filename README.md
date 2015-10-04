@@ -17,9 +17,10 @@ These hashtags can then be used to raise your social media profile!
 
 ## Architecture
 
-* Text analysis with [MonkeyLearn](https://www.monkeylearn.com/ "MonkeyLearn")
+* Text analysis with [MonkeyLearn](http://www.monkeylearn.com/ "MonkeyLearn")
+* Data from [Twitter](https://twitter.com/ "Twitter")
 * Hosted on [Heroku](https://www.heroku.com/ "Heroku")
-* Built on [Ruby on Rails](http://rubyonrails.org/ "rails") with a bit of <a href="https://jquery.com/">jQuery</a>
+* Built on [Ruby on Rails](http://rubyonrails.org/ "Rails") with a bit of <a href="https://jquery.com/">jQuery</a>
 * [Materialise CSS](http://materializecss.com/ "Materialize") for CSS
 * Icons from [Font Awesome](https://fortawesome.github.io/Font-Awesome/icons/ "Font Awesome")
 * Fonts from [Google Fonts](https://www.google.com/fonts "Google fonts")
