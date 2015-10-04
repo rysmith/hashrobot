@@ -11,12 +11,13 @@ HashRobot makes it easy for you to tweet right from our hash dash!
 
 ## Design
 HashRobot is designed to process large numbers of current and popular tweets from Twitter's API.
-HashRobot then passes them to the Monkey Learn API to gain data and relevant categories for a each tweet.
+HashRobot then passes them to the MonkeyLearn API to gain data and relevant categories for a each tweet.
 HashRobot reivews the results applies its proprietary algorithm then finds the most valuable hash tags for a each category at a given moment.
 These hashtags can then be used to raise your social media profile!
 
 ## Architecture
-* NPL via [MonkeyLearn](http://www.monkeylearn.com)
+
+* Text analysis with [MonkeyLearn](https://www.monkeylearn.com/ "MonkeyLearn")
 * Hosted on [Heroku](https://www.heroku.com/ "Heroku")
 * Built on [Ruby on Rails](http://rubyonrails.org/ "rails") with a bit of <a href="https://jquery.com/">jQuery</a>
 * [Materialise CSS](http://materializecss.com/ "Materialize") for CSS
