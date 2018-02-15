@@ -26,7 +26,7 @@ These hashtags can then be used to raise your social media profile!
 * Fonts from [Google Fonts](https://www.google.com/fonts "Google fonts")
 
 ## License
-Copyright (C) 2105 Ryan Smith, Jeff Demers, Chris Wu
+Copyright (C) 2015 Ryan Smith, Jeff Demers, Chris Wu
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
